@@ -131,6 +131,43 @@ body::before {
 .status-dot.live { background: var(--accent-emerald); box-shadow: 0 0 8px var(--accent-emerald); }
 .status-dot.stale { background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber); }
 
+/* Refresh button */
+.btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--accent-cyan);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+.btn-refresh:hover {
+  background: rgba(0, 212, 255, 0.18);
+  border-color: rgba(0, 212, 255, 0.45);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+.btn-refresh:active {
+  transform: scale(0.96);
+}
+.btn-refresh.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+.btn-refresh .spin {
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* ═══════════ ALERT BANNER ═══════════ */
 .alert-banner {
   position: relative; z-index: 2;
@@ -675,6 +712,10 @@ input[type="range"]::-webkit-slider-thumb:hover {
   <div class="header-meta">
     <span><span class="status-dot live" id="statusDot"></span><span id="statusText">Conectado</span></span>
     <span id="updateTime">Actualizado: --</span>
+    <button class="btn-refresh" id="btnRefresh" onclick="triggerRefresh()" title="Actualizar dashboard manualmente">
+      <span id="refreshIcon">🔄</span>
+      <span id="refreshLabel">Actualizar</span>
+    </button>
   </div>
 </div>
 
@@ -1335,6 +1376,70 @@ function showError(msg) {
       <div style="font-size:3rem;margin-bottom:1rem">🔌</div>
       <p>${msg}</p>
     </div>`;
+}
+
+// ═══ MANUAL REFRESH ═══
+let refreshPolling = null;
+
+function triggerRefresh() {
+  const btn = document.getElementById('btnRefresh');
+  const icon = document.getElementById('refreshIcon');
+  const label = document.getElementById('refreshLabel');
+  
+  // Mostrar spinner
+  btn.classList.add('loading');
+  icon.classList.add('spin');
+  label.textContent = 'Actualizando...';
+  
+  // Abrir Actions en nueva pestaña (el usuario debe hacer clic en "Run workflow")
+  window.open('https://github.com/cacarotmaster/hermes-dashboard/actions/workflows/manual-refresh.yml', '_blank');
+  
+  // Polling: verificar si data.json cambió
+  const startTime = DATA?.generated_at;
+  let attempts = 0;
+  const maxAttempts = 30; // 5 minutos máximo
+  
+  if (refreshPolling) clearInterval(refreshPolling);
+  
+  refreshPolling = setInterval(async () => {
+    attempts++;
+    try {
+      const resp = await fetch(DATA_URL + '?t=' + Date.now());
+      if (resp.ok) {
+        const fresh = await resp.json();
+        if (fresh.generated_at !== startTime) {
+          // ¡Nuevos datos!
+          DATA = fresh;
+          renderAll();
+          clearInterval(refreshPolling);
+          refreshPolling = null;
+          btn.classList.remove('loading');
+          icon.classList.remove('spin');
+          icon.textContent = '✅';
+          label.textContent = '¡Listo!';
+          setTimeout(() => {
+            icon.textContent = '🔄';
+            label.textContent = 'Actualizar';
+          }, 3000);
+          return;
+        }
+      }
+    } catch(e) { /* ignorar errores de red */ }
+    
+    // Timeout después de 5 minutos
+    if (attempts >= maxAttempts) {
+      clearInterval(refreshPolling);
+      refreshPolling = null;
+      btn.classList.remove('loading');
+      icon.classList.remove('spin');
+      icon.textContent = '⚠️';
+      label.textContent = 'Timeout';
+      setTimeout(() => {
+        icon.textContent = '🔄';
+        label.textContent = 'Actualizar';
+      }, 3000);
+    }
+  }, 10000);
 }
 
 // ═══ START ═══

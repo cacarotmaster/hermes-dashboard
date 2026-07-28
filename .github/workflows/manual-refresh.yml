@@ -1,0 +1,66 @@
+name: 🔄 Manual Dashboard Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Motivo de la actualización'
+        required: false
+        default: 'Actualización manual desde dashboard'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🔑 Setup SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: 🔄 Ejecutar extract.py en VPS y hacer push
+        run: |
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15 \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} bash << 'SCRIPT'
+          set -e
+
+          # 1. Copiar state.db desde el contenedor
+          echo "📦 Copiando state.db del contenedor..."
+          docker cp hermes:/opt/data/state.db /tmp/state.db 2>/dev/null
+
+          # 2. Copiar state.db de perfiles
+          for p in mari piedad cielo neffer; do
+            PROFILE_DB="/opt/data/profiles/$p/state.db"
+            if [ -f "$PROFILE_DB" ]; then
+              cp "$PROFILE_DB" "/tmp/state-$p.db"
+              echo "  ✅ $p"
+            fi
+          done
+
+          # 3. Ejecutar extractor
+          echo "📊 Ejecutando extract.py..."
+          cd ~/hermes-dashboard
+          git stash 2>/dev/null || true
+          git pull --rebase origin main 2>/dev/null || true
+          cp /tmp/hermes-dashboard/extract.py . 2>/dev/null || true
+          python3 extract.py
+
+          # 4. Commit y push si hay cambios
+          if ! git diff --quiet data.json; then
+            git add data.json
+            git commit -m "🔄 Manual refresh — $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
+            echo "✅ Dashboard actualizado y pusheado"
+          else
+            echo "ℹ️  Sin cambios — data.json ya está actualizado"
+          fi
+          SCRIPT
+
+      - name: ✅ Confirmación
+        run: |
+          echo "✅ Refresh completado. Dashboard: https://cacarotmaster.github.io/hermes-dashboard/"
+          echo "⏱️  GitHub Pages tarda ~30-60s en desplegar."
