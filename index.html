@@ -744,6 +744,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 <div class="footer">
   Hermes Watchdog · Actualización cada 2 horas · 
   <span id="footerGenTime"></span> · 
+  <span id="footerSince" style="color:var(--accent-amber)"></span> · 
   <a href="https://github.com/cacarotmaster/hermes-dashboard" style="color:var(--accent-cyan);text-decoration:none">GitHub</a>
 </div>
 
@@ -782,6 +783,10 @@ function renderAll() {
   renderAlertsDetail();
   document.getElementById('footerGenTime').textContent =
     'Generado: ' + formatTime(DATA.generated_at);
+  if (DATA.since_date) {
+    document.getElementById('footerSince').textContent =
+      '📅 Desde: ' + formatTime(DATA.since_date);
+  }
 }
 
 // ═══ STATUS ═══
