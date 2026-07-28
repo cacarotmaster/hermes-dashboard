@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T02:51:48.971863+00:00",
-  "generated_at_unix": 1785207108.9718885,
+  "generated_at": "2026-07-28T02:54:18.542493+00:00",
+  "generated_at_unix": 1785207258.5425193,
   "update_interval_minutes": 120,
   "since_date": "2026-07-27T05:00:00+00:00",
   "since_ts": 1785128400.0,
@@ -10,7 +10,7 @@
       "used_gb": 1.8,
       "free_gb": 0.2,
       "available_gb": 2.2,
-      "percent": 45.6,
+      "percent": 45.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 1.1
     },
@@ -22,17 +22,17 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "1.93%",
-        "mem": "1.238GiB / 3.73GiB",
-        "mem_percent": "33.18%"
+        "cpu": "7.22%",
+        "mem": "1.217GiB / 3.73GiB",
+        "mem_percent": "32.62%"
       },
       "mcp-qdrant": {
-        "cpu": "0.29%",
-        "mem": "84.18MiB / 3.73GiB",
-        "mem_percent": "2.20%"
+        "cpu": "0.30%",
+        "mem": "81.68MiB / 3.73GiB",
+        "mem_percent": "2.14%"
       },
       "qdrant": {
-        "cpu": "0.17%",
+        "cpu": "0.02%",
         "mem": "20MiB / 3.73GiB",
         "mem_percent": "0.52%"
       }
@@ -41,12 +41,12 @@
   "system_health": {
     "uptime": "5d 20h",
     "load": {
-      "1m": 0.37,
-      "5m": 0.17,
-      "15m": 0.11
+      "1m": 0.14,
+      "5m": 0.15,
+      "15m": 0.1
     },
-    "processes": 173,
-    "swap_percent": 49.0
+    "processes": 180,
+    "swap_percent": 50.1
   },
   "profiles": [
     {
@@ -154,8 +154,8 @@
     {
       "model": "minimax/minimax-m3",
       "providers": [
-        "auto",
-        "openrouter"
+        "openrouter",
+        "auto"
       ],
       "sessions": 2,
       "calls": 34,
@@ -166,14 +166,14 @@
       "total_tokens": 3341660,
       "estimated_cost_usd": 0.0,
       "percent": 36.1,
-      "provider": "auto, openrouter"
+      "provider": "openrouter, auto"
     },
     {
       "model": "mimo-v2.5",
       "providers": [
+        "custom:xiaomi",
         "xiaomi",
-        "auto",
-        "custom:xiaomi"
+        "auto"
       ],
       "sessions": 6,
       "calls": 73,
@@ -184,13 +184,13 @@
       "total_tokens": 3205292,
       "estimated_cost_usd": 0.0482,
       "percent": 34.6,
-      "provider": "xiaomi, auto, custom:xiaomi"
+      "provider": "custom:xiaomi, xiaomi, auto"
     },
     {
       "model": "DeepSeek-V4-Flash",
       "providers": [
-        "auto",
-        "deepinfra"
+        "deepinfra",
+        "auto"
       ],
       "sessions": 12,
       "calls": 67,
@@ -201,7 +201,7 @@
       "total_tokens": 2705382,
       "estimated_cost_usd": 0.0989,
       "percent": 29.2,
-      "provider": "auto, deepinfra"
+      "provider": "deepinfra, auto"
     }
   ],
   "grand_total_tokens": 9252334,
