@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-28T08:00:06.415822+00:00",
-  "generated_at_unix": 1785225606.4158356,
+  "generated_at": "2026-07-28T10:00:06.256483+00:00",
+  "generated_at_unix": 1785232806.2565148,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
   "system": {
     "ram": {
       "total_gb": 4.0,
-      "used_gb": 2.0,
+      "used_gb": 2.1,
       "free_gb": 0.1,
-      "available_gb": 2.0,
-      "percent": 50.1,
+      "available_gb": 1.9,
+      "percent": 52.0,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.3
     },
@@ -22,30 +22,30 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "1.88%",
-        "mem": "1.232GiB / 3.73GiB",
-        "mem_percent": "33.02%"
+        "cpu": "3.92%",
+        "mem": "1.24GiB / 3.73GiB",
+        "mem_percent": "33.24%"
       },
       "mcp-qdrant": {
-        "cpu": "0.33%",
+        "cpu": "0.35%",
         "mem": "135.5MiB / 3.73GiB",
         "mem_percent": "3.55%"
       },
       "qdrant": {
-        "cpu": "0.03%",
-        "mem": "10.59MiB / 3.73GiB",
+        "cpu": "0.05%",
+        "mem": "10.61MiB / 3.73GiB",
         "mem_percent": "0.28%"
       }
     }
   },
   "system_health": {
-    "uptime": "6d 1h",
+    "uptime": "6d 3h",
     "load": {
-      "1m": 0.01,
-      "5m": 0.02,
-      "15m": 0.0
+      "1m": 0.21,
+      "5m": 0.07,
+      "15m": 0.01
     },
-    "processes": 168,
+    "processes": 166,
     "swap_percent": 15.7
   },
   "profiles": [
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0,
       "first_activity_iso": "2026-07-28T05:27:38.835268+00:00",
       "last_activity_iso": "2026-07-28T06:40:50.371855+00:00",
-      "days_active": 0.1,
+      "days_active": 0.2,
       "favorite_model": "mimo-v2.5",
       "favorite_provider": "xiaomi",
       "image_count": 0,
@@ -227,6 +227,16 @@
         "sessions": [
           {
             "user_id": "2079556774",
+            "session_id": "20260727_080536_2576be98",
+            "last_seen": "2026-07-27 08:06:15"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260727_080536_2576be98",
+            "last_seen": "2026-07-27 08:06:14"
+          },
+          {
+            "user_id": "2079556774",
             "session_id": "20260727_071602_e07bae2f",
             "last_seen": "2026-07-27 07:50:23"
           },
@@ -239,16 +249,6 @@
             "user_id": "2079556774",
             "session_id": "20260727_063926_dd8285e2",
             "last_seen": "2026-07-27 07:12:46"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260727_063926_dd8285e2",
-            "last_seen": "2026-07-27 06:39:49"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260727_061511_527bd760",
-            "last_seen": "2026-07-27 06:17:09"
           }
         ]
       }
