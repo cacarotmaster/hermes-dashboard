@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-07-28T02:31:48.756359+00:00",
-  "generated_at_unix": 1785205908.756388,
+  "generated_at": "2026-07-28T02:46:38.618392+00:00",
+  "generated_at_unix": 1785206798.6184201,
   "update_interval_minutes": 120,
   "since_date": "2026-07-27T05:00:00+00:00",
   "since_ts": 1785128400.0,
   "system": {
     "ram": {
       "total_gb": 4.0,
-      "used_gb": 2.3,
+      "used_gb": 2.0,
       "free_gb": 0.1,
-      "available_gb": 1.7,
-      "percent": 58.5,
+      "available_gb": 2.0,
+      "percent": 50.7,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.6
+      "swap_used_gb": 0.9
     },
     "disk": {
       "total_gb": 40.5,
-      "used_gb": 28.4,
-      "free_gb": 12.0,
-      "percent": 71
+      "used_gb": 28.8,
+      "free_gb": 11.6,
+      "percent": 72
     },
     "docker": {
       "hermes": {
-        "cpu": "2.72%",
-        "mem": "1.627GiB / 3.73GiB",
-        "mem_percent": "43.60%"
+        "cpu": "8.62%",
+        "mem": "1.407GiB / 3.73GiB",
+        "mem_percent": "37.72%"
       },
       "mcp-qdrant": {
-        "cpu": "0.29%",
-        "mem": "123.2MiB / 3.73GiB",
-        "mem_percent": "3.23%"
+        "cpu": "0.32%",
+        "mem": "97.83MiB / 3.73GiB",
+        "mem_percent": "2.56%"
       },
       "qdrant": {
-        "cpu": "0.21%",
-        "mem": "19.99MiB / 3.73GiB",
+        "cpu": "0.20%",
+        "mem": "20MiB / 3.73GiB",
         "mem_percent": "0.52%"
       }
     }
   },
   "system_health": {
-    "uptime": "5d 19h",
+    "uptime": "5d 20h",
     "load": {
-      "1m": 1.1,
-      "5m": 0.39,
-      "15m": 0.14
+      "1m": 0.23,
+      "5m": 0.15,
+      "15m": 0.1
     },
-    "processes": 173,
-    "swap_percent": 25.9
+    "processes": 175,
+    "swap_percent": 40.4
   },
   "profiles": [
     {
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0.0667,
       "first_activity_iso": "2026-07-27T06:17:08.369428+00:00",
       "last_activity_iso": "2026-07-27T18:47:54.047649+00:00",
-      "days_active": 0.8,
+      "days_active": 0.9,
       "favorite_model": "deepseek-ai/DeepSeek-V4-Flash",
       "favorite_provider": "deepinfra",
       "image_count": 0,
@@ -171,8 +171,8 @@
     {
       "model": "mimo-v2.5",
       "providers": [
-        "xiaomi",
-        "auto"
+        "auto",
+        "xiaomi"
       ],
       "sessions": 2,
       "calls": 17,
@@ -183,7 +183,7 @@
       "total_tokens": 421979,
       "estimated_cost_usd": 0.0105,
       "percent": 20.4,
-      "provider": "xiaomi, auto"
+      "provider": "auto, xiaomi"
     }
   ],
   "grand_total_tokens": 2069257,
