@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T00:43:07.393878+00:00",
-  "generated_at_unix": 1785199387.3938947,
+  "generated_at": "2026-07-28T01:14:52.710378+00:00",
+  "generated_at_unix": 1785201292.7103958,
   "update_interval_minutes": 120,
   "system": {
     "ram": {
@@ -8,7 +8,7 @@
       "used_gb": 2.5,
       "free_gb": 0.1,
       "available_gb": 1.5,
-      "percent": 62.5,
+      "percent": 62.2,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.3
     },
@@ -20,86 +20,132 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "2.67%",
-        "mem": "1.683GiB / 3.73GiB",
-        "mem_percent": "45.11%"
+        "cpu": "2.01%",
+        "mem": "1.677GiB / 3.73GiB",
+        "mem_percent": "44.94%"
       },
       "mcp-qdrant": {
-        "cpu": "0.24%",
-        "mem": "163.8MiB / 3.73GiB",
-        "mem_percent": "4.29%"
+        "cpu": "0.32%",
+        "mem": "169.3MiB / 3.73GiB",
+        "mem_percent": "4.43%"
       },
       "qdrant": {
-        "cpu": "0.05%",
-        "mem": "15.3MiB / 3.73GiB",
-        "mem_percent": "0.40%"
+        "cpu": "0.03%",
+        "mem": "17.43MiB / 3.73GiB",
+        "mem_percent": "0.46%"
       }
     }
   },
   "system_health": {
     "uptime": "5d 18h",
     "load": {
-      "1m": 0.19,
-      "5m": 0.1,
-      "15m": 0.08
+      "1m": 0.16,
+      "5m": 0.08,
+      "15m": 0.02
     },
-    "processes": 175,
-    "swap_percent": 15.8
+    "processes": 172,
+    "swap_percent": 16.5
   },
   "profiles": [
     {
       "user_id": "2079556774",
-      "label": "Cacarot",
+      "label": "Carlos",
+      "bot": "default",
       "source": "telegram",
       "sessions": 146,
       "calls": 5538,
       "total_tokens": 448950789,
       "avg_tokens_per_session": 2078475,
-      "tokens_per_day": 6718877,
-      "projected_monthly_tokens": 201566318,
+      "tokens_per_day": 6716660,
+      "projected_monthly_tokens": 201499817,
       "estimated_cost_usd": 2.3287,
       "first_activity_iso": "2026-05-22T05:03:18.387871+00:00",
       "last_activity_iso": "2026-07-27T18:47:54.047649+00:00",
       "days_active": 66.8,
       "favorite_model": "deepseek-v4-flash",
       "favorite_provider": "deepseek",
-      "image_count": 0
+      "image_count": 0,
+      "active": true
     },
     {
       "user_id": "8916742032",
       "label": "Mari",
+      "bot": "mari",
       "source": "telegram",
       "sessions": 20,
       "calls": 822,
       "total_tokens": 91861858,
       "avg_tokens_per_session": 3062061,
-      "tokens_per_day": 2426544,
-      "projected_monthly_tokens": 72796339,
+      "tokens_per_day": 2425131,
+      "projected_monthly_tokens": 72753958,
       "estimated_cost_usd": 0.1891,
       "first_activity_iso": "2026-06-20T04:08:56.940844+00:00",
       "last_activity_iso": "2026-07-20T01:18:34.606783+00:00",
       "days_active": 37.9,
       "favorite_model": "mimo-v2.5-pro",
       "favorite_provider": "custom:xiaomi",
-      "image_count": 0
+      "image_count": 0,
+      "active": true
     },
     {
-      "user_id": "anon",
-      "label": "Visitante",
+      "user_id": "pending_piedad",
+      "label": "Piedad",
+      "bot": "piedad",
       "source": "telegram",
-      "sessions": 10,
-      "calls": 136,
-      "total_tokens": 3735720,
-      "avg_tokens_per_session": 373572,
-      "tokens_per_day": 61739,
-      "projected_monthly_tokens": 1852198,
-      "estimated_cost_usd": 0.0282,
-      "first_activity_iso": "2026-05-28T12:32:34.271192+00:00",
-      "last_activity_iso": "2026-06-13T03:18:17.826257+00:00",
-      "days_active": 60.5,
-      "favorite_model": "mimo-v2.5",
-      "favorite_provider": "xiaomi",
-      "image_count": 0
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
+      "estimated_cost_usd": 0,
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
+      "image_count": 0,
+      "active": false
+    },
+    {
+      "user_id": "pending_cielo",
+      "label": "Cielo",
+      "bot": "cielo",
+      "source": "telegram",
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
+      "estimated_cost_usd": 0,
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
+      "image_count": 0,
+      "active": false
+    },
+    {
+      "user_id": "pending_neffer",
+      "label": "Neffer",
+      "bot": "neffer",
+      "source": "telegram",
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
+      "estimated_cost_usd": 0,
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
+      "image_count": 0,
+      "active": false
     }
   ],
   "models": [
@@ -1522,16 +1568,16 @@
     }
   ],
   "grand_total_tokens": 1295090826,
-  "grand_total_sessions": 176,
-  "grand_total_calls": 6496,
+  "grand_total_sessions": 166,
+  "grand_total_calls": 6360,
   "projection": {
-    "current_profiles": 3,
+    "current_profiles": 2,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 3069053,
-    "projected_monthly_tokens": 552429600,
-    "projected_daily_tokens": 18414320,
+    "avg_daily_tokens_per_profile": 4570895,
+    "projected_monthly_tokens": 822761190,
+    "projected_daily_tokens": 27425373,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 635294040
+    "with_margin_monthly": 946175368
   },
   "alerts": [
     {
@@ -1542,6 +1588,11 @@
       "details": {
         "count": 10,
         "sessions": [
+          {
+            "user_id": "2079556774",
+            "session_id": "20260727_003624_787889f5",
+            "last_seen": "2026-07-27 01:07:34"
+          },
           {
             "user_id": "2079556774",
             "session_id": "20260726_224434_219cbbe5",
@@ -1561,11 +1612,6 @@
             "user_id": "2079556774",
             "session_id": "20260726_210106_793a9a4e",
             "last_seen": "2026-07-26 21:06:14"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260726_210106_793a9a4e",
-            "last_seen": "2026-07-26 21:05:28"
           }
         ]
       }
