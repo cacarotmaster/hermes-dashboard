@@ -31,6 +31,14 @@ TOKEN_RATE_MULTIPLIER = 2.0         # >2× la media → alerta
 ORPHAN_SESSION_HOURS = 24           # >24h sin actividad
 ALERT_COOLDOWN_HOURS = 6            # no reenviar misma alerta antes de 6h
 
+# Fecha de inicio: solo contar datos desde esta fecha (medianoche Colombia = UTC-5)
+# Cambiar a None para contar todo el histórico
+SINCE_DATE = datetime.now(timezone.utc).replace(hour=5, minute=0, second=0, microsecond=0)
+# Si ya pasó la medianoche UTC-5, usar la de hoy; si no, la de ayer
+if SINCE_DATE > datetime.now(timezone.utc):
+    SINCE_DATE = SINCE_DATE - timedelta(days=1)
+SINCE_TS = SINCE_DATE.timestamp()
+
 # Mapeo user_id → nombre perfil (detectado de gateway routing)
 USER_PROFILE_MAP = {}  # se llena dinámicamente
 
@@ -171,7 +179,9 @@ def get_profile_metrics(conn):
     c = conn.cursor()
 
     # Mapeo user_id → display_name desde gateway_routing
+    # También mapeo inverso: display_name → user_id
     user_labels = {}
+    name_to_uid = {}
     try:
         c.execute("SELECT entry_json FROM gateway_routing")
         for (entry_json,) in c.fetchall():
@@ -181,15 +191,25 @@ def get_profile_metrics(conn):
                 uid = entry.get("user_id", "")
                 dn = entry.get("display_name", "")
                 if "telegram" in sk:
-                    # Extraer user_id del session_key si no está en entry
                     if not uid and "telegram:dm:" in sk:
                         uid = sk.split("telegram:dm:")[-1]
                     if uid:
                         user_labels[str(uid)] = dn
+                        if dn:
+                            name_to_uid[dn] = str(uid)
             except json.JSONDecodeError:
                 pass
     except Exception:
         pass
+
+    # Perfiles esperados: todos los gateways configurados en el VPS
+    expected_profiles = [
+        {"user_id": name_to_uid.get("Cacarot", "2079556774"), "label": "Carlos", "bot": "default"},
+        {"user_id": name_to_uid.get("Mari", "8916742032"), "label": "Mari", "bot": "mari"},
+        {"user_id": name_to_uid.get("Piedad", ""), "label": "Piedad", "bot": "piedad"},
+        {"user_id": name_to_uid.get("Cielo", ""), "label": "Cielo", "bot": "cielo"},
+        {"user_id": name_to_uid.get("Neffer", ""), "label": "Neffer", "bot": "neffer"},
+    ]
 
     # Solo perfiles Telegram
     c.execute("""
@@ -210,24 +230,18 @@ def get_profile_metrics(conn):
         FROM session_model_usage sm
         JOIN sessions s ON sm.session_id = s.id
         WHERE s.source = 'telegram'
+          AND sm.first_seen >= ?
         GROUP BY s.user_id
         ORDER BY total_tok DESC
-    """)
+    """, (SINCE_TS,))
 
-    profiles = []
+    # Construir datos reales indexados por user_id
+    real_data = {}
     now = time.time()
     for row in c.fetchall():
         uid, source, sessions_n, calls, total_tok, est_cost, avg_tok, first, last = row
         uid_str = str(uid) if uid else "anon"
 
-        # Usar display_name del gateway, o user_id como fallback
-        label = user_labels.get(uid_str)
-        if not label and uid_str == "2079556774":
-            label = "Carlos"
-        elif not label:
-            label = f"TG:{uid_str[-4:]}" if uid_str != "anon" else "Visitante"
-
-        # Calcular tokens/día
         if first and total_tok:
             days_active = max(1, (now - first) / 86400)
             tok_per_day = total_tok / days_active
@@ -236,12 +250,8 @@ def get_profile_metrics(conn):
             tok_per_day = 0
             tok_month_est = 0
 
-        profiles.append({
-            "user_id": uid_str,
-            "label": label,
-            "source": source,
-            "sessions": sessions_n,
-            "calls": calls or 0,
+        real_data[uid_str] = {
+            "sessions": sessions_n, "calls": calls or 0,
             "total_tokens": total_tok or 0,
             "avg_tokens_per_session": int(avg_tok or 0),
             "tokens_per_day": int(tok_per_day),
@@ -250,9 +260,9 @@ def get_profile_metrics(conn):
             "first_activity_iso": datetime.fromtimestamp(first, tz=timezone.utc).isoformat() if first else None,
             "last_activity_iso": datetime.fromtimestamp(last, tz=timezone.utc).isoformat() if last else None,
             "days_active": round(max(1, now - first) / 86400, 1) if first else 0,
-        })
+        }
 
-    # Modelo favorito por perfil
+    # Modelo favorito por user_id
     c.execute("""
         SELECT s.user_id, sm.model, sm.billing_provider,
                SUM(sm.input_tokens + sm.output_tokens
@@ -261,19 +271,15 @@ def get_profile_metrics(conn):
         FROM session_model_usage sm
         JOIN sessions s ON sm.session_id = s.id
         WHERE s.source = 'telegram'
+          AND sm.first_seen >= ?
         GROUP BY s.user_id, sm.model, sm.billing_provider
         ORDER BY total_tok DESC
-    """)
+    """, (SINCE_TS,))
     fav_models = {}
     for uid, model, provider, tok in c.fetchall():
         uid_str = str(uid) if uid else "anon"
         if uid_str not in fav_models:
             fav_models[uid_str] = {"model": model, "provider": provider, "tokens": tok}
-
-    for p in profiles:
-        fm = fav_models.get(p["user_id"])
-        p["favorite_model"] = fm["model"] if fm else "n/a"
-        p["favorite_provider"] = fm["provider"] if fm else "n/a"
 
     # Cargar contador de imágenes
     image_counts = {}
@@ -284,8 +290,35 @@ def get_profile_metrics(conn):
         except (json.JSONDecodeError, IOError):
             pass
 
-    for p in profiles:
-        p["image_count"] = image_counts.get(p["user_id"], 0)
+    # Fusionar perfiles esperados + datos reales
+    profiles = []
+    for ep in expected_profiles:
+        uid = ep["user_id"] or ""
+        label = ep["label"]
+        rd = real_data.get(uid, {})
+
+        fm = fav_models.get(uid)
+        profile = {
+            "user_id": uid or f"pending_{label.lower()}",
+            "label": label,
+            "bot": ep["bot"],
+            "source": "telegram",
+            "sessions": rd.get("sessions", 0),
+            "calls": rd.get("calls", 0),
+            "total_tokens": rd.get("total_tokens", 0),
+            "avg_tokens_per_session": rd.get("avg_tokens_per_session", 0),
+            "tokens_per_day": rd.get("tokens_per_day", 0),
+            "projected_monthly_tokens": rd.get("projected_monthly_tokens", 0),
+            "estimated_cost_usd": rd.get("estimated_cost_usd", 0),
+            "first_activity_iso": rd.get("first_activity_iso"),
+            "last_activity_iso": rd.get("last_activity_iso"),
+            "days_active": rd.get("days_active", 0),
+            "favorite_model": fm["model"] if fm else "—",
+            "favorite_provider": fm["provider"] if fm else "—",
+            "image_count": image_counts.get(uid, 0),
+            "active": rd.get("total_tokens", 0) > 0,
+        }
+        profiles.append(profile)
 
     return profiles
 
@@ -305,9 +338,10 @@ def get_model_metrics(conn):
             SUM(sm.reasoning_tokens) as reasoning,
             SUM(sm.estimated_cost_usd) as est_cost
         FROM session_model_usage sm
+        WHERE sm.first_seen >= ?
         GROUP BY sm.model, sm.billing_provider
         ORDER BY input_tok + output_tok + COALESCE(cache_read, 0) + COALESCE(reasoning, 0) DESC
-    """)
+    """, (SINCE_TS,))
 
     models = []
     grand_total = 0
@@ -632,6 +666,8 @@ def main():
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "generated_at_unix": time.time(),
         "update_interval_minutes": 120,
+        "since_date": SINCE_DATE.isoformat(),
+        "since_ts": SINCE_TS,
         "system": system,
         "system_health": system_health,
         "profiles": profiles,
