@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T02:31:33.805518+00:00",
-  "generated_at_unix": 1785205893.8055391,
+  "generated_at": "2026-07-28T02:31:48.756359+00:00",
+  "generated_at_unix": 1785205908.756388,
   "update_interval_minutes": 120,
   "since_date": "2026-07-27T05:00:00+00:00",
   "since_ts": 1785128400.0,
@@ -10,29 +10,29 @@
       "used_gb": 2.3,
       "free_gb": 0.1,
       "available_gb": 1.7,
-      "percent": 57.5,
+      "percent": 58.5,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.6
     },
     "disk": {
       "total_gb": 40.5,
       "used_gb": 28.4,
-      "free_gb": 12.1,
+      "free_gb": 12.0,
       "percent": 71
     },
     "docker": {
       "hermes": {
-        "cpu": "6.52%",
-        "mem": "1.607GiB / 3.73GiB",
-        "mem_percent": "43.07%"
+        "cpu": "2.72%",
+        "mem": "1.627GiB / 3.73GiB",
+        "mem_percent": "43.60%"
       },
       "mcp-qdrant": {
-        "cpu": "0.31%",
-        "mem": "124.1MiB / 3.73GiB",
-        "mem_percent": "3.25%"
+        "cpu": "0.29%",
+        "mem": "123.2MiB / 3.73GiB",
+        "mem_percent": "3.23%"
       },
       "qdrant": {
-        "cpu": "0.03%",
+        "cpu": "0.21%",
         "mem": "19.99MiB / 3.73GiB",
         "mem_percent": "0.52%"
       }
@@ -42,8 +42,8 @@
     "uptime": "5d 19h",
     "load": {
       "1m": 1.1,
-      "5m": 0.36,
-      "15m": 0.13
+      "5m": 0.39,
+      "15m": 0.14
     },
     "processes": 173,
     "swap_percent": 25.9
@@ -171,8 +171,8 @@
     {
       "model": "mimo-v2.5",
       "providers": [
-        "auto",
-        "xiaomi"
+        "xiaomi",
+        "auto"
       ],
       "sessions": 2,
       "calls": 17,
@@ -183,7 +183,7 @@
       "total_tokens": 421979,
       "estimated_cost_usd": 0.0105,
       "percent": 20.4,
-      "provider": "auto, xiaomi"
+      "provider": "xiaomi, auto"
     }
   ],
   "grand_total_tokens": 2069257,
