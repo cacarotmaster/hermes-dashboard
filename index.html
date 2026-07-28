@@ -804,6 +804,18 @@ function updateStatus() {
     dot.className = 'status-dot stale';
     txt.textContent = 'Desactualizado';
     time.textContent = 'Última: ' + formatRelative(age);
+    // Mostrar banner de datos viejos
+    showStaleBanner(age);
+  }
+}
+
+function showStaleBanner(ageSeconds) {
+  const banner = document.getElementById('alertBanner');
+  const text = document.getElementById('alertText');
+  const hours = Math.floor(ageSeconds / 3600);
+  if (hours >= 3 && !banner.classList.contains('show')) {
+    banner.className = 'alert-banner show warning';
+    text.innerHTML = `<strong>⚠️ Datos desactualizados</strong> — última actualización hace ${hours}h. ¿El cron del VPS está funcionando?`;
   }
 }
 
