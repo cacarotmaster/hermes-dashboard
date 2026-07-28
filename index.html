@@ -799,10 +799,15 @@ let DATA = null;
 const DATA_URL = 'data.json';
 const MAX_STALE_MINUTES = 130; // 2h + 10min grace
 
+// Cache-busting helper
+function fetchJSON(url) {
+  return fetch(url + '?v=' + Date.now());
+}
+
 // ═══ INIT ═══
 async function init() {
   try {
-    const resp = await fetch(DATA_URL);
+    const resp = await fetchJSON(DATA_URL);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     DATA = await resp.json();
     renderAll();
@@ -1404,7 +1409,7 @@ function triggerRefresh() {
   refreshPolling = setInterval(async () => {
     attempts++;
     try {
-      const resp = await fetch(DATA_URL + '?t=' + Date.now());
+      const resp = await fetchJSON(DATA_URL);
       if (resp.ok) {
         const fresh = await resp.json();
         if (fresh.generated_at !== startTime) {
