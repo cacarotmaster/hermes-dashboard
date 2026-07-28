@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T01:15:10.041379+00:00",
-  "generated_at_unix": 1785201310.0413995,
+  "generated_at": "2026-07-28T01:21:20.197194+00:00",
+  "generated_at_unix": 1785201680.1972165,
   "update_interval_minutes": 120,
   "system": {
     "ram": {
@@ -8,9 +8,9 @@
       "used_gb": 2.4,
       "free_gb": 0.1,
       "available_gb": 1.6,
-      "percent": 60.8,
+      "percent": 59.0,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.4
+      "swap_used_gb": 0.5
     },
     "disk": {
       "total_gb": 40.5,
@@ -20,18 +20,18 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "3.14%",
-        "mem": "1.637GiB / 3.73GiB",
-        "mem_percent": "43.88%"
+        "cpu": "3.96%",
+        "mem": "1.579GiB / 3.73GiB",
+        "mem_percent": "42.32%"
       },
       "mcp-qdrant": {
-        "cpu": "0.25%",
-        "mem": "165.7MiB / 3.73GiB",
-        "mem_percent": "4.34%"
+        "cpu": "0.33%",
+        "mem": "150.9MiB / 3.73GiB",
+        "mem_percent": "3.95%"
       },
       "qdrant": {
-        "cpu": "0.03%",
-        "mem": "17.55MiB / 3.73GiB",
+        "cpu": "0.05%",
+        "mem": "17.59MiB / 3.73GiB",
         "mem_percent": "0.46%"
       }
     }
@@ -39,12 +39,12 @@
   "system_health": {
     "uptime": "5d 18h",
     "load": {
-      "1m": 0.21,
+      "1m": 0.19,
       "5m": 0.09,
       "15m": 0.02
     },
-    "processes": 171,
-    "swap_percent": 18.7
+    "processes": 175,
+    "swap_percent": 21.8
   },
   "profiles": [
     {
@@ -56,8 +56,8 @@
       "calls": 5538,
       "total_tokens": 448950789,
       "avg_tokens_per_session": 2078475,
-      "tokens_per_day": 6716640,
-      "projected_monthly_tokens": 201499212,
+      "tokens_per_day": 6716209,
+      "projected_monthly_tokens": 201486298,
       "estimated_cost_usd": 2.3287,
       "first_activity_iso": "2026-05-22T05:03:18.387871+00:00",
       "last_activity_iso": "2026-07-27T18:47:54.047649+00:00",
@@ -76,8 +76,8 @@
       "calls": 822,
       "total_tokens": 91861858,
       "avg_tokens_per_session": 3062061,
-      "tokens_per_day": 2425119,
-      "projected_monthly_tokens": 72753573,
+      "tokens_per_day": 2424844,
+      "projected_monthly_tokens": 72745345,
       "estimated_cost_usd": 0.1891,
       "first_activity_iso": "2026-06-20T04:08:56.940844+00:00",
       "last_activity_iso": "2026-07-20T01:18:34.606783+00:00",
@@ -1573,11 +1573,11 @@
   "projection": {
     "current_profiles": 2,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 4570879,
-    "projected_monthly_tokens": 822758310,
-    "projected_daily_tokens": 27425277,
+    "avg_daily_tokens_per_profile": 4570526,
+    "projected_monthly_tokens": 822694770,
+    "projected_daily_tokens": 27423159,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 946172056
+    "with_margin_monthly": 946098985
   },
   "alerts": [
     {
