@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-07-28T00:15:29.237272+00:00",
+  "generated_at_unix": 1785197729.2372863,
+  "update_interval_minutes": 120,
+  "system": {
+    "ram": {
+      "total_gb": 3.7,
+      "used_gb": 2.2,
+      "free_gb": 0.185,
+      "available_gb": 1.6,
+      "percent": 59.5,
+      "swap_total_gb": 2.0,
+      "swap_used_gb": 0.318
+    },
+    "disk": {
+      "total_gb": 38.0,
+      "used_gb": 26.0,
+      "free_gb": 12.0,
+      "percent": 69
+    },
+    "docker": {
+      "hermes": {
+        "cpu": "3.39%",
+        "mem": "1.529GiB / 3.73GiB",
+        "mem_percent": "40.98%"
+      },
+      "mcp-qdrant": {
+        "cpu": "0.36%",
+        "mem": "191.4MiB / 3.73GiB",
+        "mem_percent": "5.01%"
+      },
+      "qdrant": {
+        "cpu": "0.15%",
+        "mem": "137.5MiB / 3.73GiB",
+        "mem_percent": "3.60%"
+      }
+    }
+  },
+  "profiles": [
+    {
+      "user_id": "anon",
+      "label": "default (Carlos)",
+      "source": "tui",
+      "sessions": 289,
+      "calls": 8102,
+      "total_tokens": 604500000,
+      "avg_tokens_per_session": 2091000,
+      "tokens_per_day": 8500000,
+      "projected_monthly_tokens": 255000000,
+      "estimated_cost_usd": 6.33,
+      "favorite_model": "deepseek-v4-flash",
+      "favorite_provider": "deepseek",
+      "days_active": 71,
+      "first_activity_iso": "2026-05-17T00:00:00Z",
+      "last_activity_iso": "2026-07-28T00:15:29.237288+00:00",
+      "image_count": 12
+    },
+    {
+      "user_id": "2079556774",
+      "label": "Carlos",
+      "source": "telegram",
+      "sessions": 146,
+      "calls": 5538,
+      "total_tokens": 449000000,
+      "avg_tokens_per_session": 3075000,
+      "tokens_per_day": 7200000,
+      "projected_monthly_tokens": 216000000,
+      "estimated_cost_usd": 2.55,
+      "favorite_model": "mimo-v2.5",
+      "favorite_provider": "xiaomi",
+      "days_active": 62,
+      "first_activity_iso": "2026-05-26T00:00:00Z",
+      "last_activity_iso": "2026-07-28T00:15:29.237291+00:00",
+      "image_count": 8
+    },
+    {
+      "user_id": "anon",
+      "label": "default (CLI)",
+      "source": "cli",
+      "sessions": 96,
+      "calls": 1612,
+      "total_tokens": 103900000,
+      "avg_tokens_per_session": 1082000,
+      "tokens_per_day": 1800000,
+      "projected_monthly_tokens": 54000000,
+      "estimated_cost_usd": 0.95,
+      "favorite_model": "deepseek-v4-pro",
+      "favorite_provider": "deepseek",
+      "days_active": 58,
+      "first_activity_iso": "2026-05-30T00:00:00Z",
+      "last_activity_iso": "2026-07-28T00:15:29.237294+00:00",
+      "image_count": 0
+    },
+    {
+      "user_id": "8916742032",
+      "label": "Mari",
+      "source": "telegram",
+      "sessions": 20,
+      "calls": 822,
+      "total_tokens": 91900000,
+      "avg_tokens_per_session": 4595000,
+      "tokens_per_day": 2100000,
+      "projected_monthly_tokens": 63000000,
+      "estimated_cost_usd": 0.45,
+      "favorite_model": "mimo-v2.5",
+      "favorite_provider": "openrouter",
+      "days_active": 44,
+      "first_activity_iso": "2026-06-13T00:00:00Z",
+      "last_activity_iso": "2026-07-28T00:15:29.237296+00:00",
+      "image_count": 25
+    },
+    {
+      "user_id": "anon",
+      "label": "Piedad",
+      "source": "telegram",
+      "sessions": 10,
+      "calls": 136,
+      "total_tokens": 3700000,
+      "avg_tokens_per_session": 370000,
+      "tokens_per_day": 120000,
+      "projected_monthly_tokens": 3600000,
+      "estimated_cost_usd": 0.03,
+      "favorite_model": "deepseek-v4-flash",
+      "favorite_provider": "deepseek",
+      "days_active": 31,
+      "first_activity_iso": "2026-06-26T00:00:00Z",
+      "last_activity_iso": "2026-07-28T00:15:29.237301+00:00",
+      "image_count": 2
+    }
+  ],
+  "models": [
+    {
+      "model": "mimo-v2.5",
+      "provider": "xiaomi",
+      "sessions": 104,
+      "calls": 2808,
+      "input_tokens": 160000000,
+      "output_tokens": 44500000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 204500000,
+      "estimated_cost_usd": 0.0,
+      "percent": 15.8
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "sessions": 135,
+      "calls": 4547,
+      "input_tokens": 250000000,
+      "output_tokens": 108000000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 358000000,
+      "estimated_cost_usd": 0.0,
+      "percent": 27.6
+    },
+    {
+      "model": "xiaomi/mimo-v2.5",
+      "provider": "openrouter",
+      "sessions": 62,
+      "calls": 1724,
+      "input_tokens": 90000000,
+      "output_tokens": 37400000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 127400000,
+      "estimated_cost_usd": 0.0,
+      "percent": 9.8
+    },
+    {
+      "model": "mimo-v2.5",
+      "provider": "custom",
+      "sessions": 37,
+      "calls": 1168,
+      "input_tokens": 62000000,
+      "output_tokens": 26700000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 88700000,
+      "estimated_cost_usd": 0.0,
+      "percent": 6.8
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "sessions": 22,
+      "calls": 986,
+      "input_tokens": 70000000,
+      "output_tokens": 25800000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 95800000,
+      "estimated_cost_usd": 0.0,
+      "percent": 7.4
+    },
+    {
+      "model": "openrouter/owl-alpha",
+      "provider": "openrouter",
+      "sessions": 10,
+      "calls": 506,
+      "input_tokens": 32000000,
+      "output_tokens": 14500000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 46500000,
+      "estimated_cost_usd": 0.0,
+      "percent": 3.6
+    },
+    {
+      "model": "mimo-v2.5-pro",
+      "provider": "custom:xiaomi",
+      "sessions": 5,
+      "calls": 228,
+      "input_tokens": 28000000,
+      "output_tokens": 11900000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 39900000,
+      "estimated_cost_usd": 0.0,
+      "percent": 3.1
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "provider": "custom:xiaomi",
+      "sessions": 8,
+      "calls": 420,
+      "input_tokens": 25000000,
+      "output_tokens": 11200000,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 36200000,
+      "estimated_cost_usd": 0.0,
+      "percent": 2.8
+    }
+  ],
+  "grand_total_tokens": 1295100000,
+  "grand_total_sessions": 622,
+  "grand_total_calls": 17203,
+  "projection": {
+    "current_profiles": 5,
+    "target_profiles": 6,
+    "avg_daily_tokens_per_profile": 3900000,
+    "projected_monthly_tokens": 702000000,
+    "projected_daily_tokens": 23400000,
+    "growth_margin_percent": 15,
+    "with_margin_monthly": 807300000
+  },
+  "alerts": [
+    {
+      "type": "multi_session_user",
+      "severity": "critical",
+      "profile": "Mari",
+      "user_id": "8916742032",
+      "source": "telegram",
+      "message": "Mari tiene 3 sesiones activas simultáneas (umbral: 2)",
+      "details": {
+        "active_sessions": 3,
+        "threshold": 2,
+        "session_ids": [
+          "20260727_184550_d5ba",
+          "20260727_190012_a3f2",
+          "20260727_191530_c8e1"
+        ]
+      }
+    },
+    {
+      "type": "token_rate_spike",
+      "severity": "warning",
+      "profile": "Carlos",
+      "user_id": "2079556774",
+      "source": "telegram",
+      "message": "Carlos: 4.2M tokens en la última hora (media: 1.5M/h, 2.8x)",
+      "details": {
+        "tokens_last_hour": 4200000,
+        "avg_hourly_tokens": 1500000,
+        "multiplier": 2.8
+      }
+    }
+  ],
+  "alerts_count": 2,
+  "alerts_by_severity": {
+    "critical": 1,
+    "warning": 1,
+    "info": 0
+  }
+}
