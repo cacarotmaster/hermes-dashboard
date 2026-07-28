@@ -703,7 +703,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   <!-- TAB: Resumen -->
   <div class="tab-panel active" id="tab-resumen">
     <div class="card-grid" id="kpiGrid"></div>
-    <div class="profile-grid" id="quickProfiles"></div>
+    <div class="card-grid" id="healthGrid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));"></div>
   </div>
 
   <!-- TAB: Perfiles -->
@@ -774,7 +774,7 @@ function renderAll() {
   updateStatus();
   renderAlerts();
   renderKPIs();
-  renderQuickProfiles();
+  renderHealth();
   buildProfileFilters();
   renderAllProfiles();
   renderModels();
@@ -1055,11 +1055,45 @@ function renderModels() {
   if (count) count.textContent = `${models.length} modelo(s)`;
 }
 
-// ═══ QUICK PROFILES (Resumen tab) ═══
-function renderQuickProfiles() {
-  const grid = document.getElementById('quickProfiles');
-  const profiles = (DATA.profiles || []).slice(0, 4);
-  grid.innerHTML = profiles.map(p => profileCardHTML(p)).join('');
+// ═══ SYSTEM HEALTH ═══
+function renderHealth() {
+  const grid = document.getElementById('healthGrid');
+  if (!grid) return;
+  const sh = DATA.system_health || {};
+  const dock = DATA.system.docker || {};
+
+  const dockerNames = Object.keys(dock).filter(k => k !== 'error');
+  const dockerList = dockerNames.map(k =>
+    `<div style="display:flex;justify-content:space-between;font-size:0.75rem;margin:2px 0">
+      <span style="color:var(--text-secondary)">${esc(k)}</span>
+      <span style="color:var(--text-primary);font-weight:600">${dock[k].mem}</span>
+    </div>`
+  ).join('');
+
+  const load = sh.load || {};
+  const loadStr = load['1m'] ? `${load['1m'].toFixed(1)} / ${load['5m'].toFixed(1)} / ${load['15m'].toFixed(1)}` : '--';
+
+  grid.innerHTML = `
+    <div class="card">
+      <div class="card-label">⏱️ Uptime VPS</div>
+      <div class="card-value">${esc(sh.uptime || '--')}</div>
+      <div class="card-sub">Procesos: ${sh.processes || 0}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">📊 Load Average</div>
+      <div class="card-value" style="font-size:1.1rem">${loadStr}</div>
+      <div class="card-sub">1m / 5m / 15m</div>
+    </div>
+    <div class="card">
+      <div class="card-label">💾 Swap</div>
+      <div class="card-value">${sh.swap_percent || 0}%</div>
+      <div class="card-sub">${DATA.system.ram ? fmt(DATA.system.ram.swap_used_gb) + ' / ' + fmt(DATA.system.ram.swap_total_gb) + ' GB' : '--'}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">🐳 Contenedores</div>
+      <div style="margin-top:0.3rem">${dockerList || '<span style="color:var(--text-muted);font-size:0.75rem">Sin datos</span>'}</div>
+    </div>
+  `;
 }
 
 // ═══ PROJECTION ═══
