@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T20:00:06.784916+00:00",
-  "generated_at_unix": 1785268806.7849362,
+  "generated_at": "2026-07-28T22:00:06.982144+00:00",
+  "generated_at_unix": 1785276006.9821618,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
@@ -10,43 +10,43 @@
       "used_gb": 2.3,
       "free_gb": 0.1,
       "available_gb": 1.7,
-      "percent": 57.3,
+      "percent": 58.3,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.4
+      "swap_used_gb": 0.3
     },
     "disk": {
       "total_gb": 40.5,
-      "used_gb": 30.8,
-      "free_gb": 9.7,
+      "used_gb": 31.0,
+      "free_gb": 9.4,
       "percent": 77
     },
     "docker": {
       "hermes": {
-        "cpu": "2.26%",
-        "mem": "1.724GiB / 3.73GiB",
-        "mem_percent": "46.23%"
+        "cpu": "4.01%",
+        "mem": "1.464GiB / 3.73GiB",
+        "mem_percent": "39.26%"
       },
       "mcp-qdrant": {
-        "cpu": "0.65%",
-        "mem": "114.6MiB / 3.73GiB",
-        "mem_percent": "3.00%"
+        "cpu": "0.35%",
+        "mem": "126.6MiB / 3.73GiB",
+        "mem_percent": "3.31%"
       },
       "qdrant": {
-        "cpu": "0.23%",
-        "mem": "8.855MiB / 3.73GiB",
-        "mem_percent": "0.23%"
+        "cpu": "0.04%",
+        "mem": "21.46MiB / 3.73GiB",
+        "mem_percent": "0.56%"
       }
     }
   },
   "system_health": {
-    "uptime": "6d 13h",
+    "uptime": "6d 15h",
     "load": {
-      "1m": 0.2,
-      "5m": 0.06,
-      "15m": 0.04
+      "1m": 0.02,
+      "5m": 0.09,
+      "15m": 0.29
     },
-    "processes": 168,
-    "swap_percent": 16.4
+    "processes": 184,
+    "swap_percent": 15.9
   },
   "profiles": [
     {
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0.4009,
       "first_activity_iso": "2026-07-28T05:27:38.835268+00:00",
       "last_activity_iso": "2026-07-28T19:41:21.988780+00:00",
-      "days_active": 0.6,
+      "days_active": 0.7,
       "favorite_model": "deepseek-v4-pro",
       "favorite_provider": "deepseek",
       "image_count": 0,
