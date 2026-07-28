@@ -957,35 +957,40 @@ function profileCardHTML(p) {
   const imgRow = imgCount > 0 
     ? `<span class="profile-model-badge" style="background:rgba(236,72,153,0.08);color:var(--accent-pink);border-color:rgba(236,72,153,0.15)">🖼️ ${imgCount} img</span>`
     : '';
+  const isActive = p.active !== false;
+  const activeBadge = isActive
+    ? '<span style="font-size:0.65rem;color:var(--accent-emerald)">● Activo</span>'
+    : '<span style="font-size:0.65rem;color:var(--text-muted)">○ Sin actividad</span>';
+
   return `
-    <div class="profile-card">
+    <div class="profile-card" style="${isActive ? '' : 'opacity:0.55;'}">
       <div class="profile-header">
         <div>
-          <div class="profile-name">${esc(p.label || p.user_id)}</div>
-          <div style="font-size:0.72rem;color:var(--text-muted)">${esc(p.user_id)}</div>
+          <div class="profile-name">${esc(p.label || p.user_id)} ${activeBadge}</div>
+          <div style="font-size:0.72rem;color:var(--text-muted)">Bot: ${esc(p.bot || p.user_id)}</div>
         </div>
         <span class="profile-source ${srcClass}">${p.source || '?'}</span>
       </div>
       <div class="profile-stats">
         <div class="profile-stat">
           <div class="stat-label">Sesiones</div>
-          <div class="stat-value">${p.sessions}</div>
+          <div class="stat-value">${p.sessions || '—'}</div>
         </div>
         <div class="profile-stat">
           <div class="stat-label">Tokens totales</div>
-          <div class="stat-value">${formatTokens(p.total_tokens)}</div>
+          <div class="stat-value">${p.total_tokens ? formatTokens(p.total_tokens) : '—'}</div>
         </div>
         <div class="profile-stat">
           <div class="stat-label">Tokens/día</div>
-          <div class="stat-value">${formatTokens(p.tokens_per_day)}</div>
+          <div class="stat-value">${p.tokens_per_day ? formatTokens(p.tokens_per_day) : '—'}</div>
         </div>
         <div class="profile-stat">
           <div class="stat-label">Proy. mensual</div>
-          <div class="stat-value">${formatTokens(p.projected_monthly_tokens)}</div>
+          <div class="stat-value">${p.projected_monthly_tokens ? formatTokens(p.projected_monthly_tokens) : '—'}</div>
         </div>
       </div>
       <div>
-        <span class="profile-model-badge">🤖 ${esc(p.favorite_model)}</span>
+        ${p.favorite_model && p.favorite_model !== '—' ? `<span class="profile-model-badge">🤖 ${esc(p.favorite_model)}</span>` : ''}
         ${p.estimated_cost_usd ? `<span class="profile-model-badge" style="background:rgba(16,185,129,0.08);color:var(--accent-emerald);border-color:rgba(16,185,129,0.15)">$${p.estimated_cost_usd.toFixed(3)}</span>` : ''}
         ${imgRow}
       </div>
@@ -1199,8 +1204,7 @@ function renderAlertsDetail() {
         </span>
       </div>
       <p style="font-size:0.9rem;margin:0.4rem 0">${esc(a.message)}</p>
-      ${a.details ? '<pre style="font-size:0.7rem;color:var(--text-muted);background:var(--bg-elevated);padding:0.5rem;border-radius:4px;overflow-x:auto;margin-top:0.5rem">' + 
-        JSON.stringify(a.details, null, 2) + '</pre>' : ''}
+      ${formatAlertDetails(a)}
     </div>
   `).join('');
 }
@@ -1239,6 +1243,37 @@ function esc(s) {
 function escAttr(s) {
   if (!s) return '';
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function formatAlertDetails(a) {
+  if (!a.details) return '';
+  const d = a.details;
+  let html = '<div style="margin-top:0.5rem;font-size:0.72rem;color:var(--text-secondary)">';
+
+  if (d.active_sessions !== undefined) {
+    html += `Sesiones activas: <strong>${d.active_sessions}</strong> / umbral: ${d.threshold}`;
+    if (d.session_ids && d.session_ids.length > 0) {
+      html += '<br>Sesiones: ' + d.session_ids.slice(0,5).map(s => `<code style="font-size:0.65rem;background:var(--bg-elevated);padding:1px 4px;border-radius:3px">${esc(s).slice(-12)}</code>`).join(', ');
+    }
+  }
+
+  if (d.tokens_last_hour !== undefined) {
+    html += `Tokens última hora: <strong>${formatTokens(d.tokens_last_hour)}</strong> (media: ${formatTokens(d.avg_hourly_tokens)}/h, ${d.multiplier}×)`;
+  }
+
+  if (d.count !== undefined && d.sessions) {
+    html += `<strong>${d.count}</strong> sesiones huérfanas:`;
+    html += '<br>' + d.sessions.map(s =>
+      `  • <code style="font-size:0.65rem;background:var(--bg-elevated);padding:1px 4px;border-radius:3px">${esc(s.session_id).slice(-16)}</code> — ${esc(s.last_seen)}`
+    ).join('<br>');
+  }
+
+  if (d.users !== undefined) {
+    html += `Usuarios: ${d.users.length}<br>Threshold: ${d.threshold}`;
+  }
+
+  html += '</div>';
+  return html;
 }
 
 function showError(msg) {
