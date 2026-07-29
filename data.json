@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-29T08:00:07.412821+00:00",
-  "generated_at_unix": 1785312007.4128432,
+  "generated_at": "2026-07-29T10:00:06.499543+00:00",
+  "generated_at_unix": 1785319206.499557,
   "update_interval_minutes": 120,
   "since_date": "2026-07-29T05:00:00+00:00",
   "since_ts": 1785301200.0,
   "system": {
     "ram": {
       "total_gb": 4.0,
-      "used_gb": 2.3,
+      "used_gb": 2.4,
       "free_gb": 0.1,
-      "available_gb": 1.7,
-      "percent": 58.6,
+      "available_gb": 1.6,
+      "percent": 60.3,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.6
     },
@@ -22,30 +22,30 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "3.65%",
-        "mem": "1.658GiB / 3.73GiB",
-        "mem_percent": "44.46%"
+        "cpu": "2.66%",
+        "mem": "1.662GiB / 3.73GiB",
+        "mem_percent": "44.54%"
       },
       "mcp-qdrant": {
-        "cpu": "0.49%",
-        "mem": "54.74MiB / 3.73GiB",
-        "mem_percent": "1.43%"
+        "cpu": "0.28%",
+        "mem": "124.9MiB / 3.73GiB",
+        "mem_percent": "3.27%"
       },
       "qdrant": {
-        "cpu": "0.03%",
-        "mem": "10.38MiB / 3.73GiB",
-        "mem_percent": "0.27%"
+        "cpu": "0.16%",
+        "mem": "10.57MiB / 3.73GiB",
+        "mem_percent": "0.28%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 1h",
+    "uptime": "7d 3h",
     "load": {
-      "1m": 0.23,
-      "5m": 0.12,
-      "15m": 0.04
+      "1m": 0.32,
+      "5m": 0.07,
+      "15m": 0.02
     },
-    "processes": 181,
+    "processes": 182,
     "swap_percent": 29.0
   },
   "profiles": [
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0,
       "first_activity_iso": "2026-07-29T05:27:09.330779+00:00",
       "last_activity_iso": "2026-07-29T05:27:51.677894+00:00",
-      "days_active": 0.1,
+      "days_active": 0.2,
       "favorite_model": "z-ai/glm-5.2",
       "favorite_provider": "nvidia-nim",
       "image_count": 0,
