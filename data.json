@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T02:00:06.412638+00:00",
-  "generated_at_unix": 1785290406.412659,
+  "generated_at": "2026-07-29T02:33:26.463568+00:00",
+  "generated_at_unix": 1785292406.4636095,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
@@ -8,11 +8,11 @@
     "ram": {
       "total_gb": 4.0,
       "used_gb": 2.3,
-      "free_gb": 0.1,
+      "free_gb": 0.2,
       "available_gb": 1.7,
-      "percent": 57.8,
+      "percent": 56.9,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.4
+      "swap_used_gb": 0.5
     },
     "disk": {
       "total_gb": 40.5,
@@ -22,31 +22,31 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "2.32%",
-        "mem": "1.578GiB / 3.73GiB",
-        "mem_percent": "42.31%"
+        "cpu": "2.76%",
+        "mem": "1.559GiB / 3.73GiB",
+        "mem_percent": "41.78%"
       },
       "mcp-qdrant": {
-        "cpu": "0.30%",
+        "cpu": "0.36%",
         "mem": "118.2MiB / 3.73GiB",
         "mem_percent": "3.09%"
       },
       "qdrant": {
-        "cpu": "0.02%",
+        "cpu": "0.26%",
         "mem": "17.33MiB / 3.73GiB",
         "mem_percent": "0.45%"
       }
     }
   },
   "system_health": {
-    "uptime": "6d 19h",
+    "uptime": "6d 20h",
     "load": {
-      "1m": 0.1,
-      "5m": 0.03,
-      "15m": 0.01
+      "1m": 0.78,
+      "5m": 0.2,
+      "15m": 0.05
     },
-    "processes": 182,
-    "swap_percent": 20.7
+    "processes": 187,
+    "swap_percent": 21.3
   },
   "profiles": [
     {
@@ -133,46 +133,6 @@
       "user_id": "pending_neffer",
       "label": "Neffer",
       "bot": "neffer",
-      "source": "telegram",
-      "sessions": 0,
-      "calls": 0,
-      "total_tokens": 0,
-      "avg_tokens_per_session": 0,
-      "tokens_per_day": 0,
-      "projected_monthly_tokens": 0,
-      "estimated_cost_usd": 0,
-      "first_activity_iso": null,
-      "last_activity_iso": null,
-      "days_active": 0,
-      "favorite_model": "—",
-      "favorite_provider": "—",
-      "image_count": 0,
-      "active": false
-    },
-    {
-      "user_id": "pending_angela",
-      "label": "Angela",
-      "bot": "angela",
-      "source": "telegram",
-      "sessions": 0,
-      "calls": 0,
-      "total_tokens": 0,
-      "avg_tokens_per_session": 0,
-      "tokens_per_day": 0,
-      "projected_monthly_tokens": 0,
-      "estimated_cost_usd": 0,
-      "first_activity_iso": null,
-      "last_activity_iso": null,
-      "days_active": 0,
-      "favorite_model": "—",
-      "favorite_provider": "—",
-      "image_count": 0,
-      "active": false
-    },
-    {
-      "user_id": "pending_leidy",
-      "label": "Leidy",
-      "bot": "leidy",
       "source": "telegram",
       "sessions": 0,
       "calls": 0,
@@ -340,7 +300,7 @@
   "grand_total_calls": 207,
   "projection": {
     "current_profiles": 1,
-    "target_profiles": 8,
+    "target_profiles": 6,
     "avg_daily_tokens_per_profile": 15104092,
     "projected_monthly_tokens": 2718736560,
     "projected_daily_tokens": 90624552,
