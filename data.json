@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T22:06:02.405757+00:00",
-  "generated_at_unix": 1785276362.405781,
+  "generated_at": "2026-07-29T00:00:07.458600+00:00",
+  "generated_at_unix": 1785283207.458619,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
@@ -10,43 +10,43 @@
       "used_gb": 2.2,
       "free_gb": 0.1,
       "available_gb": 1.8,
-      "percent": 55.6,
+      "percent": 55.8,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.3
+      "swap_used_gb": 0.4
     },
     "disk": {
       "total_gb": 40.5,
-      "used_gb": 31.0,
-      "free_gb": 9.4,
+      "used_gb": 30.8,
+      "free_gb": 9.7,
       "percent": 77
     },
     "docker": {
       "hermes": {
-        "cpu": "2.89%",
-        "mem": "1.452GiB / 3.73GiB",
-        "mem_percent": "38.92%"
+        "cpu": "3.66%",
+        "mem": "1.467GiB / 3.73GiB",
+        "mem_percent": "39.32%"
       },
       "mcp-qdrant": {
-        "cpu": "0.30%",
-        "mem": "126.6MiB / 3.73GiB",
-        "mem_percent": "3.32%"
+        "cpu": "0.39%",
+        "mem": "118MiB / 3.73GiB",
+        "mem_percent": "3.09%"
       },
       "qdrant": {
-        "cpu": "0.02%",
-        "mem": "21.46MiB / 3.73GiB",
-        "mem_percent": "0.56%"
+        "cpu": "0.06%",
+        "mem": "25.11MiB / 3.73GiB",
+        "mem_percent": "0.66%"
       }
     }
   },
   "system_health": {
-    "uptime": "6d 15h",
+    "uptime": "6d 17h",
     "load": {
-      "1m": 0.16,
-      "5m": 0.14,
-      "15m": 0.24
+      "1m": 0.24,
+      "5m": 0.08,
+      "15m": 0.02
     },
-    "processes": 189,
-    "swap_percent": 15.9
+    "processes": 181,
+    "swap_percent": 16.8
   },
   "profiles": [
     {
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0.4009,
       "first_activity_iso": "2026-07-28T05:27:38.835268+00:00",
       "last_activity_iso": "2026-07-28T19:41:21.988780+00:00",
-      "days_active": 0.7,
+      "days_active": 0.8,
       "favorite_model": "deepseek-v4-pro",
       "favorite_provider": "deepseek",
       "image_count": 0,
