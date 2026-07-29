@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T02:34:47.008501+00:00",
-  "generated_at_unix": 1785292487.0085337,
+  "generated_at": "2026-07-29T04:00:06.002656+00:00",
+  "generated_at_unix": 1785297606.0026789,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
@@ -10,7 +10,7 @@
       "used_gb": 2.3,
       "free_gb": 0.1,
       "available_gb": 1.7,
-      "percent": 57.5,
+      "percent": 57.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.5
     },
@@ -22,31 +22,31 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "3.92%",
-        "mem": "1.541GiB / 3.73GiB",
-        "mem_percent": "41.32%"
+        "cpu": "3.60%",
+        "mem": "1.581GiB / 3.73GiB",
+        "mem_percent": "42.37%"
       },
       "mcp-qdrant": {
-        "cpu": "0.36%",
-        "mem": "118.5MiB / 3.73GiB",
-        "mem_percent": "3.10%"
+        "cpu": "0.35%",
+        "mem": "118.7MiB / 3.73GiB",
+        "mem_percent": "3.11%"
       },
       "qdrant": {
-        "cpu": "0.04%",
-        "mem": "17.29MiB / 3.73GiB",
+        "cpu": "0.05%",
+        "mem": "17.35MiB / 3.73GiB",
         "mem_percent": "0.45%"
       }
     }
   },
   "system_health": {
-    "uptime": "6d 20h",
+    "uptime": "6d 21h",
     "load": {
-      "1m": 0.95,
-      "5m": 0.32,
-      "15m": 0.1
+      "1m": 0.0,
+      "5m": 0.02,
+      "15m": 0.0
     },
-    "processes": 186,
-    "swap_percent": 22.2
+    "processes": 181,
+    "swap_percent": 24.6
   },
   "profiles": [
     {
@@ -318,6 +318,21 @@
         "sessions": [
           {
             "user_id": "2079556774",
+            "session_id": "20260728_035222_a228ccfe",
+            "last_seen": "2026-07-28 03:59:33"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260727_184550_d5ba0ccf",
+            "last_seen": "2026-07-28 03:49:50"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260727_184550_d5ba0ccf",
+            "last_seen": "2026-07-28 03:49:44"
+          },
+          {
+            "user_id": "2079556774",
             "session_id": "20260727_184550_d5ba0ccf",
             "last_seen": "2026-07-27 18:47:54"
           },
@@ -325,21 +340,6 @@
             "user_id": "2079556774",
             "session_id": "20260727_150605_2a7e1ed9",
             "last_seen": "2026-07-27 15:12:45"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260727_150605_2a7e1ed9",
-            "last_seen": "2026-07-27 15:12:27"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260727_150605_2a7e1ed9",
-            "last_seen": "2026-07-27 15:12:16"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260727_080536_2576be98",
-            "last_seen": "2026-07-27 08:06:15"
           }
         ]
       }
