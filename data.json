@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T16:00:07.778995+00:00",
-  "generated_at_unix": 1785340807.7790203,
+  "generated_at": "2026-07-29T18:00:06.964810+00:00",
+  "generated_at_unix": 1785348006.9648337,
   "update_interval_minutes": 120,
   "since_date": "2026-07-29T05:00:00+00:00",
   "since_ts": 1785301200.0,
@@ -22,31 +22,31 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "2.48%",
-        "mem": "1.728GiB / 3.73GiB",
-        "mem_percent": "46.33%"
+        "cpu": "3.82%",
+        "mem": "1.725GiB / 3.73GiB",
+        "mem_percent": "46.23%"
       },
       "mcp-qdrant": {
-        "cpu": "0.31%",
-        "mem": "121.6MiB / 3.73GiB",
+        "cpu": "0.41%",
+        "mem": "121.7MiB / 3.73GiB",
         "mem_percent": "3.18%"
       },
       "qdrant": {
-        "cpu": "0.03%",
-        "mem": "8.434MiB / 3.73GiB",
+        "cpu": "0.04%",
+        "mem": "8.449MiB / 3.73GiB",
         "mem_percent": "0.22%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 9h",
+    "uptime": "7d 11h",
     "load": {
-      "1m": 0.08,
-      "5m": 0.04,
+      "1m": 0.04,
+      "5m": 0.06,
       "15m": 0.01
     },
-    "processes": 180,
-    "swap_percent": 40.6
+    "processes": 187,
+    "swap_percent": 41.2
   },
   "profiles": [
     {
@@ -55,15 +55,15 @@
       "bot": "default",
       "source": "telegram",
       "sessions": 2,
-      "calls": 45,
-      "total_tokens": 3369621,
-      "avg_tokens_per_session": 673924,
-      "tokens_per_day": 3369621,
-      "projected_monthly_tokens": 101088630,
-      "estimated_cost_usd": 0.0826,
+      "calls": 54,
+      "total_tokens": 4617142,
+      "avg_tokens_per_session": 923428,
+      "tokens_per_day": 4617142,
+      "projected_monthly_tokens": 138514260,
+      "estimated_cost_usd": 0.098,
       "first_activity_iso": "2026-07-29T05:27:09.330779+00:00",
-      "last_activity_iso": "2026-07-29T15:25:42.645927+00:00",
-      "days_active": 0.4,
+      "last_activity_iso": "2026-07-29T16:39:38.779003+00:00",
+      "days_active": 0.5,
       "favorite_model": "deepseek-v4-pro",
       "favorite_provider": "deepseek",
       "image_count": 0,
@@ -155,14 +155,14 @@
       "model": "deepseek-v4-pro",
       "provider": "deepseek",
       "sessions": 1,
-      "calls": 30,
-      "input_tokens": 105601,
-      "output_tokens": 29210,
-      "cache_read_tokens": 3116800,
-      "reasoning_tokens": 4803,
-      "total_tokens": 3256414,
-      "estimated_cost_usd": 0.0826,
-      "percent": 96.6
+      "calls": 39,
+      "input_tokens": 114220,
+      "output_tokens": 37468,
+      "cache_read_tokens": 4346752,
+      "reasoning_tokens": 5495,
+      "total_tokens": 4503935,
+      "estimated_cost_usd": 0.098,
+      "percent": 97.5
     },
     {
       "model": "z-ai/glm-5.2",
@@ -175,7 +175,7 @@
       "reasoning_tokens": 0,
       "total_tokens": 90668,
       "estimated_cost_usd": 0,
-      "percent": 2.7
+      "percent": 2.0
     },
     {
       "model": "deepseek-v4-pro",
@@ -188,7 +188,20 @@
       "reasoning_tokens": 4709,
       "total_tokens": 22347,
       "estimated_cost_usd": 0,
-      "percent": 0.7
+      "percent": 0.5
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "provider": "deepinfra",
+      "sessions": 1,
+      "calls": 1,
+      "input_tokens": 4263,
+      "output_tokens": 164,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 4427,
+      "estimated_cost_usd": 0.0004,
+      "percent": 0.1
     },
     {
       "model": "z-ai/glm-5.2",
@@ -204,36 +217,19 @@
       "percent": 0.0
     }
   ],
-  "grand_total_tokens": 3369621,
+  "grand_total_tokens": 4621569,
   "grand_total_sessions": 2,
-  "grand_total_calls": 45,
+  "grand_total_calls": 54,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 3369621,
-    "projected_monthly_tokens": 606531780,
-    "projected_daily_tokens": 20217726,
+    "avg_daily_tokens_per_profile": 4617142,
+    "projected_monthly_tokens": 831085560,
+    "projected_daily_tokens": 27702852,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 697511547
+    "with_margin_monthly": 955748393
   },
   "alerts": [
-    {
-      "type": "multi_session_user",
-      "severity": "critical",
-      "profile": "2079556774",
-      "user_id": "2079556774",
-      "source": "telegram",
-      "message": "2079556774 tiene 3 sesiones activas simultáneas (umbral: 2)",
-      "details": {
-        "active_sessions": 3,
-        "threshold": 2,
-        "session_ids": [
-          "20260729_132744_f36ccb79",
-          "20260729_132744_f36ccb79",
-          "20260729_132744_f36ccb79"
-        ]
-      }
-    },
     {
       "type": "orphan_sessions",
       "severity": "info",
@@ -244,6 +240,21 @@
         "sessions": [
           {
             "user_id": "2079556774",
+            "session_id": "20260728_163237_ae30e8a9",
+            "last_seen": "2026-07-28 16:35:40"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260728_150823_dc51b498",
+            "last_seen": "2026-07-28 16:18:16"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260728_150823_dc51b498",
+            "last_seen": "2026-07-28 16:17:52"
+          },
+          {
+            "user_id": "2079556774",
             "session_id": "20260728_150823_dc51b498",
             "last_seen": "2026-07-28 15:20:37"
           },
@@ -251,29 +262,14 @@
             "user_id": "2079556774",
             "session_id": "20260728_150823_dc51b498",
             "last_seen": "2026-07-28 15:16:14"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260728_150823_dc51b498",
-            "last_seen": "2026-07-28 15:15:58"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260728_123107_cf651ed7",
-            "last_seen": "2026-07-28 14:59:03"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260728_123107_cf651ed7",
-            "last_seen": "2026-07-28 14:58:03"
           }
         ]
       }
     }
   ],
-  "alerts_count": 2,
+  "alerts_count": 1,
   "alerts_by_severity": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
     "info": 1
   }
