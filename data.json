@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T18:00:06.964810+00:00",
-  "generated_at_unix": 1785348006.9648337,
+  "generated_at": "2026-07-29T20:00:07.255451+00:00",
+  "generated_at_unix": 1785355207.255475,
   "update_interval_minutes": 120,
   "since_date": "2026-07-29T05:00:00+00:00",
   "since_ts": 1785301200.0,
@@ -8,9 +8,9 @@
     "ram": {
       "total_gb": 4.0,
       "used_gb": 2.4,
-      "free_gb": 0.1,
+      "free_gb": 0.2,
       "available_gb": 1.6,
-      "percent": 59.7,
+      "percent": 59.5,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.9
     },
@@ -22,31 +22,31 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "3.82%",
-        "mem": "1.725GiB / 3.73GiB",
-        "mem_percent": "46.23%"
+        "cpu": "4.22%",
+        "mem": "1.622GiB / 3.73GiB",
+        "mem_percent": "43.49%"
       },
       "mcp-qdrant": {
-        "cpu": "0.41%",
+        "cpu": "0.35%",
         "mem": "121.7MiB / 3.73GiB",
         "mem_percent": "3.18%"
       },
       "qdrant": {
         "cpu": "0.04%",
-        "mem": "8.449MiB / 3.73GiB",
+        "mem": "8.527MiB / 3.73GiB",
         "mem_percent": "0.22%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 11h",
+    "uptime": "7d 13h",
     "load": {
-      "1m": 0.04,
-      "5m": 0.06,
-      "15m": 0.01
+      "1m": 0.02,
+      "5m": 0.04,
+      "15m": 0.05
     },
-    "processes": 187,
-    "swap_percent": 41.2
+    "processes": 183,
+    "swap_percent": 41.6
   },
   "profiles": [
     {
@@ -55,15 +55,15 @@
       "bot": "default",
       "source": "telegram",
       "sessions": 2,
-      "calls": 54,
-      "total_tokens": 4617142,
-      "avg_tokens_per_session": 923428,
-      "tokens_per_day": 4617142,
-      "projected_monthly_tokens": 138514260,
-      "estimated_cost_usd": 0.098,
+      "calls": 96,
+      "total_tokens": 12110645,
+      "avg_tokens_per_session": 2422129,
+      "tokens_per_day": 12110645,
+      "projected_monthly_tokens": 363319350,
+      "estimated_cost_usd": 0.2083,
       "first_activity_iso": "2026-07-29T05:27:09.330779+00:00",
-      "last_activity_iso": "2026-07-29T16:39:38.779003+00:00",
-      "days_active": 0.5,
+      "last_activity_iso": "2026-07-29T18:46:24.773219+00:00",
+      "days_active": 0.6,
       "favorite_model": "deepseek-v4-pro",
       "favorite_provider": "deepseek",
       "image_count": 0,
@@ -155,14 +155,14 @@
       "model": "deepseek-v4-pro",
       "provider": "deepseek",
       "sessions": 1,
-      "calls": 39,
-      "input_tokens": 114220,
-      "output_tokens": 37468,
-      "cache_read_tokens": 4346752,
-      "reasoning_tokens": 5495,
-      "total_tokens": 4503935,
-      "estimated_cost_usd": 0.098,
-      "percent": 97.5
+      "calls": 75,
+      "input_tokens": 177163,
+      "output_tokens": 102090,
+      "cache_read_tokens": 11693696,
+      "reasoning_tokens": 11066,
+      "total_tokens": 11984015,
+      "estimated_cost_usd": 0.2083,
+      "percent": 98.9
     },
     {
       "model": "z-ai/glm-5.2",
@@ -175,20 +175,20 @@
       "reasoning_tokens": 0,
       "total_tokens": 90668,
       "estimated_cost_usd": 0,
-      "percent": 2.0
+      "percent": 0.7
     },
     {
       "model": "deepseek-v4-pro",
       "provider": "auto",
       "sessions": 1,
-      "calls": 11,
-      "input_tokens": 12115,
-      "output_tokens": 4755,
-      "cache_read_tokens": 768,
-      "reasoning_tokens": 4709,
-      "total_tokens": 22347,
+      "calls": 17,
+      "input_tokens": 19001,
+      "output_tokens": 7267,
+      "cache_read_tokens": 2304,
+      "reasoning_tokens": 7198,
+      "total_tokens": 35770,
       "estimated_cost_usd": 0,
-      "percent": 0.5
+      "percent": 0.3
     },
     {
       "model": "deepseek-ai/DeepSeek-V4-Flash",
@@ -201,7 +201,7 @@
       "reasoning_tokens": 0,
       "total_tokens": 4427,
       "estimated_cost_usd": 0.0004,
-      "percent": 0.1
+      "percent": 0.0
     },
     {
       "model": "z-ai/glm-5.2",
@@ -217,17 +217,17 @@
       "percent": 0.0
     }
   ],
-  "grand_total_tokens": 4621569,
+  "grand_total_tokens": 12115072,
   "grand_total_sessions": 2,
-  "grand_total_calls": 54,
+  "grand_total_calls": 96,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 4617142,
-    "projected_monthly_tokens": 831085560,
-    "projected_daily_tokens": 27702852,
+    "avg_daily_tokens_per_profile": 12110645,
+    "projected_monthly_tokens": 2179916100,
+    "projected_daily_tokens": 72663870,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 955748393
+    "with_margin_monthly": 2506903515
   },
   "alerts": [
     {
@@ -238,6 +238,11 @@
       "details": {
         "count": 10,
         "sessions": [
+          {
+            "user_id": "2079556774",
+            "session_id": "20260728_163237_ae30e8a9",
+            "last_seen": "2026-07-28 19:41:21"
+          },
           {
             "user_id": "2079556774",
             "session_id": "20260728_163237_ae30e8a9",
@@ -257,11 +262,6 @@
             "user_id": "2079556774",
             "session_id": "20260728_150823_dc51b498",
             "last_seen": "2026-07-28 15:20:37"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260728_150823_dc51b498",
-            "last_seen": "2026-07-28 15:16:14"
           }
         ]
       }
