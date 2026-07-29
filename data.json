@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T02:33:26.463568+00:00",
-  "generated_at_unix": 1785292406.4636095,
+  "generated_at": "2026-07-29T02:34:47.008501+00:00",
+  "generated_at_unix": 1785292487.0085337,
   "update_interval_minutes": 120,
   "since_date": "2026-07-28T05:00:00+00:00",
   "since_ts": 1785214800.0,
@@ -8,9 +8,9 @@
     "ram": {
       "total_gb": 4.0,
       "used_gb": 2.3,
-      "free_gb": 0.2,
+      "free_gb": 0.1,
       "available_gb": 1.7,
-      "percent": 56.9,
+      "percent": 57.5,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.5
     },
@@ -22,18 +22,18 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "2.76%",
-        "mem": "1.559GiB / 3.73GiB",
-        "mem_percent": "41.78%"
+        "cpu": "3.92%",
+        "mem": "1.541GiB / 3.73GiB",
+        "mem_percent": "41.32%"
       },
       "mcp-qdrant": {
         "cpu": "0.36%",
-        "mem": "118.2MiB / 3.73GiB",
-        "mem_percent": "3.09%"
+        "mem": "118.5MiB / 3.73GiB",
+        "mem_percent": "3.10%"
       },
       "qdrant": {
-        "cpu": "0.26%",
-        "mem": "17.33MiB / 3.73GiB",
+        "cpu": "0.04%",
+        "mem": "17.29MiB / 3.73GiB",
         "mem_percent": "0.45%"
       }
     }
@@ -41,12 +41,12 @@
   "system_health": {
     "uptime": "6d 20h",
     "load": {
-      "1m": 0.78,
-      "5m": 0.2,
-      "15m": 0.05
+      "1m": 0.95,
+      "5m": 0.32,
+      "15m": 0.1
     },
-    "processes": 187,
-    "swap_percent": 21.3
+    "processes": 186,
+    "swap_percent": 22.2
   },
   "profiles": [
     {
