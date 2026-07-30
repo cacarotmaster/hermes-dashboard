@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T22:00:06.836778+00:00",
-  "generated_at_unix": 1785362406.8367984,
+  "generated_at": "2026-07-30T00:00:06.664417+00:00",
+  "generated_at_unix": 1785369606.6644468,
   "update_interval_minutes": 120,
   "since_date": "2026-07-29T05:00:00+00:00",
   "since_ts": 1785301200.0,
@@ -10,7 +10,7 @@
       "used_gb": 2.4,
       "free_gb": 0.1,
       "available_gb": 1.6,
-      "percent": 60.3,
+      "percent": 60.6,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.9
     },
@@ -22,31 +22,31 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "2.80%",
-        "mem": "1.643GiB / 3.73GiB",
-        "mem_percent": "44.06%"
+        "cpu": "6.15%",
+        "mem": "1.658GiB / 3.73GiB",
+        "mem_percent": "44.46%"
       },
       "mcp-qdrant": {
-        "cpu": "1.37%",
+        "cpu": "1.52%",
         "mem": "121.7MiB / 3.73GiB",
         "mem_percent": "3.19%"
       },
       "qdrant": {
-        "cpu": "0.05%",
-        "mem": "8.547MiB / 3.73GiB",
+        "cpu": "0.21%",
+        "mem": "8.516MiB / 3.73GiB",
         "mem_percent": "0.22%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 15h",
+    "uptime": "7d 17h",
     "load": {
-      "1m": 0.35,
-      "5m": 0.1,
-      "15m": 0.02
+      "1m": 0.4,
+      "5m": 0.08,
+      "15m": 0.03
     },
-    "processes": 183,
-    "swap_percent": 41.6
+    "processes": 181,
+    "swap_percent": 41.5
   },
   "profiles": [
     {
@@ -55,15 +55,15 @@
       "bot": "default",
       "source": "telegram",
       "sessions": 2,
-      "calls": 96,
-      "total_tokens": 12110645,
-      "avg_tokens_per_session": 2422129,
-      "tokens_per_day": 12110645,
-      "projected_monthly_tokens": 363319350,
-      "estimated_cost_usd": 0.2083,
+      "calls": 102,
+      "total_tokens": 13083987,
+      "avg_tokens_per_session": 2616797,
+      "tokens_per_day": 13083987,
+      "projected_monthly_tokens": 392519610,
+      "estimated_cost_usd": 0.2159,
       "first_activity_iso": "2026-07-29T05:27:09.330779+00:00",
-      "last_activity_iso": "2026-07-29T18:46:24.773219+00:00",
-      "days_active": 0.7,
+      "last_activity_iso": "2026-07-29T23:20:09.124167+00:00",
+      "days_active": 0.8,
       "favorite_model": "deepseek-v4-pro",
       "favorite_provider": "deepseek",
       "image_count": 0,
@@ -155,14 +155,14 @@
       "model": "deepseek-v4-pro",
       "provider": "deepseek",
       "sessions": 1,
-      "calls": 75,
-      "input_tokens": 177163,
-      "output_tokens": 102090,
-      "cache_read_tokens": 11693696,
-      "reasoning_tokens": 11066,
-      "total_tokens": 11984015,
-      "estimated_cost_usd": 0.2083,
-      "percent": 98.9
+      "calls": 79,
+      "input_tokens": 180949,
+      "output_tokens": 104935,
+      "cache_read_tokens": 12657024,
+      "reasoning_tokens": 11726,
+      "total_tokens": 12954634,
+      "estimated_cost_usd": 0.2159,
+      "percent": 99.0
     },
     {
       "model": "z-ai/glm-5.2",
@@ -181,12 +181,12 @@
       "model": "deepseek-v4-pro",
       "provider": "auto",
       "sessions": 1,
-      "calls": 17,
-      "input_tokens": 19001,
-      "output_tokens": 7267,
-      "cache_read_tokens": 2304,
-      "reasoning_tokens": 7198,
-      "total_tokens": 35770,
+      "calls": 19,
+      "input_tokens": 20412,
+      "output_tokens": 7671,
+      "cache_read_tokens": 2816,
+      "reasoning_tokens": 7594,
+      "total_tokens": 38493,
       "estimated_cost_usd": 0,
       "percent": 0.3
     },
@@ -217,17 +217,17 @@
       "percent": 0.0
     }
   ],
-  "grand_total_tokens": 12115072,
+  "grand_total_tokens": 13088414,
   "grand_total_sessions": 2,
-  "grand_total_calls": 96,
+  "grand_total_calls": 102,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 12110645,
-    "projected_monthly_tokens": 2179916100,
-    "projected_daily_tokens": 72663870,
+    "avg_daily_tokens_per_profile": 13083987,
+    "projected_monthly_tokens": 2355117660,
+    "projected_daily_tokens": 78503922,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 2506903515
+    "with_margin_monthly": 2708385309
   },
   "alerts": [
     {
