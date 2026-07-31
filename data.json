@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-07-31T10:00:06.784458+00:00",
-  "generated_at_unix": 1785492006.784475,
+  "generated_at": "2026-07-31T12:00:05.817167+00:00",
+  "generated_at_unix": 1785499205.8171773,
   "update_interval_minutes": 120,
   "since_date": "2026-07-31T05:00:00+00:00",
   "since_ts": 1785474000.0,
   "system": {
     "ram": {
-      "total_gb": 4.0,
-      "used_gb": 2.3,
-      "free_gb": 0.1,
-      "available_gb": 1.7,
-      "percent": 58.2,
+      "total_gb": 8.1,
+      "used_gb": 2.5,
+      "free_gb": 3.2,
+      "available_gb": 5.6,
+      "percent": 31.0,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.0
     },
     "disk": {
-      "total_gb": 40.5,
-      "used_gb": 29.4,
-      "free_gb": 11.0,
-      "percent": 73
+      "total_gb": 76.9,
+      "used_gb": 29.6,
+      "free_gb": 47.3,
+      "percent": 39
     },
     "docker": {
       "hermes": {
-        "cpu": "4.84%",
-        "mem": "1.417GiB / 3.73GiB",
-        "mem_percent": "37.97%"
+        "cpu": "1.72%",
+        "mem": "1.649GiB / 7.57GiB",
+        "mem_percent": "21.79%"
       },
       "mcp-qdrant": {
-        "cpu": "0.25%",
-        "mem": "244.6MiB / 3.73GiB",
-        "mem_percent": "6.40%"
+        "cpu": "0.18%",
+        "mem": "302.3MiB / 7.57GiB",
+        "mem_percent": "3.90%"
       },
       "qdrant": {
-        "cpu": "0.20%",
-        "mem": "16.83MiB / 3.73GiB",
-        "mem_percent": "0.44%"
+        "cpu": "0.18%",
+        "mem": "262.6MiB / 7.57GiB",
+        "mem_percent": "3.39%"
       }
     }
   },
   "system_health": {
-    "uptime": "0d 7h",
+    "uptime": "0d 1h",
     "load": {
-      "1m": 0.28,
+      "1m": 0.27,
       "5m": 0.08,
       "15m": 0.02
     },
-    "processes": 177,
-    "swap_percent": 2.3
+    "processes": 198,
+    "swap_percent": 0.0
   },
   "profiles": [
     {
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0.0996,
       "first_activity_iso": "2026-07-31T05:06:19.360246+00:00",
       "last_activity_iso": "2026-07-31T06:05:16.237367+00:00",
-      "days_active": 0.2,
+      "days_active": 0.3,
       "favorite_model": "z-ai/glm-5.2",
       "favorite_provider": "nvidia-nim",
       "image_count": 0,
