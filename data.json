@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-02T10:00:06.179255+00:00",
-  "generated_at_unix": 1785664806.1792672,
+  "generated_at": "2026-08-02T12:00:05.373745+00:00",
+  "generated_at_unix": 1785672005.3737574,
   "update_interval_minutes": 120,
   "since_date": "2026-08-02T05:00:00+00:00",
   "since_ts": 1785646800.0,
@@ -9,8 +9,8 @@
       "total_gb": 8.1,
       "used_gb": 2.3,
       "free_gb": 0.2,
-      "available_gb": 5.9,
-      "percent": 27.7,
+      "available_gb": 5.8,
+      "percent": 28.9,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.0
     },
@@ -22,9 +22,9 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "1.72%",
-        "mem": "1.212GiB / 7.57GiB",
-        "mem_percent": "16.01%"
+        "cpu": "1.24%",
+        "mem": "1.231GiB / 7.57GiB",
+        "mem_percent": "16.27%"
       },
       "mcp-qdrant": {
         "cpu": "0.22%",
@@ -33,19 +33,19 @@
       },
       "qdrant": {
         "cpu": "0.06%",
-        "mem": "38.61MiB / 7.57GiB",
+        "mem": "38.62MiB / 7.57GiB",
         "mem_percent": "0.50%"
       }
     }
   },
   "system_health": {
-    "uptime": "1d 23h",
+    "uptime": "2d 1h",
     "load": {
-      "1m": 0.25,
-      "5m": 0.07,
-      "15m": 0.02
+      "1m": 0.13,
+      "5m": 0.04,
+      "15m": 0.01
     },
-    "processes": 199,
+    "processes": 195,
     "swap_percent": 0.0
   },
   "profiles": [
@@ -63,7 +63,7 @@
       "estimated_cost_usd": 0.0313,
       "first_activity_iso": "2026-08-02T05:54:14.349815+00:00",
       "last_activity_iso": "2026-08-02T09:29:21.144642+00:00",
-      "days_active": 0.2,
+      "days_active": 0.3,
       "favorite_model": "z-ai/glm-5.2",
       "favorite_provider": "nvidia-nim",
       "image_count": 0,
@@ -231,24 +231,6 @@
   },
   "alerts": [
     {
-      "type": "multi_session_user",
-      "severity": "critical",
-      "profile": "2079556774",
-      "user_id": "2079556774",
-      "source": "telegram",
-      "message": "2079556774 tiene 4 sesiones activas simultáneas (umbral: 2)",
-      "details": {
-        "active_sessions": 4,
-        "threshold": 2,
-        "session_ids": [
-          "20260802_091622_d0b9cc38",
-          "20260802_091622_d0b9cc38",
-          "20260802_055152_78216529",
-          "20260802_055152_78216529"
-        ]
-      }
-    },
-    {
       "type": "orphan_sessions",
       "severity": "info",
       "profile": "all",
@@ -285,9 +267,9 @@
       }
     }
   ],
-  "alerts_count": 2,
+  "alerts_count": 1,
   "alerts_by_severity": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
     "info": 1
   }
