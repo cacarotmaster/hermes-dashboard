@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-03T16:00:05.913146+00:00",
-  "generated_at_unix": 1785772805.9131556,
+  "generated_at": "2026-08-03T18:00:05.607186+00:00",
+  "generated_at_unix": 1785780005.6071944,
   "update_interval_minutes": 120,
   "since_date": "2026-08-03T05:00:00+00:00",
   "since_ts": 1785733200.0,
@@ -10,7 +10,7 @@
       "used_gb": 3.7,
       "free_gb": 0.2,
       "available_gb": 4.4,
-      "percent": 45.4,
+      "percent": 45.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.0
     },
@@ -22,14 +22,14 @@
     },
     "docker": {
       "qdrant": {
-        "cpu": "0.06%",
-        "mem": "32.49MiB / 7.57GiB",
+        "cpu": "0.14%",
+        "mem": "32.75MiB / 7.57GiB",
         "mem_percent": "0.42%"
       },
       "hermes": {
-        "cpu": "1.59%",
-        "mem": "3.001GiB / 7.57GiB",
-        "mem_percent": "39.65%"
+        "cpu": "1.04%",
+        "mem": "2.829GiB / 7.57GiB",
+        "mem_percent": "37.37%"
       },
       "mcp-qdrant": {
         "cpu": "0.22%",
@@ -39,14 +39,14 @@
     }
   },
   "system_health": {
-    "uptime": "3d 5h",
+    "uptime": "3d 7h",
     "load": {
-      "1m": 0.34,
-      "5m": 0.11,
-      "15m": 0.04
+      "1m": 0.0,
+      "5m": 0.0,
+      "15m": 0.0
     },
-    "processes": 193,
-    "swap_percent": 0.6
+    "processes": 196,
+    "swap_percent": 0.7
   },
   "profiles": [
     {
@@ -55,14 +55,14 @@
       "bot": "default",
       "source": "telegram",
       "sessions": 1,
-      "calls": 71,
-      "total_tokens": 2645479,
-      "avg_tokens_per_session": 881826,
-      "tokens_per_day": 2645479,
-      "projected_monthly_tokens": 79364370,
+      "calls": 113,
+      "total_tokens": 5693106,
+      "avg_tokens_per_session": 1897702,
+      "tokens_per_day": 5693106,
+      "projected_monthly_tokens": 170793180,
       "estimated_cost_usd": 0,
       "first_activity_iso": "2026-08-03T14:44:30.695248+00:00",
-      "last_activity_iso": "2026-08-03T15:10:39.766663+00:00",
+      "last_activity_iso": "2026-08-03T17:58:08.776953+00:00",
       "days_active": 0.1,
       "favorite_model": "mimo-v2.5",
       "favorite_provider": "xiaomi",
@@ -155,59 +155,42 @@
       "model": "mimo-v2.5",
       "provider": "xiaomi",
       "sessions": 1,
-      "calls": 41,
-      "input_tokens": 91187,
-      "output_tokens": 32401,
-      "cache_read_tokens": 2437504,
-      "reasoning_tokens": 3348,
-      "total_tokens": 2564440,
+      "calls": 65,
+      "input_tokens": 174412,
+      "output_tokens": 67828,
+      "cache_read_tokens": 5301056,
+      "reasoning_tokens": 5083,
+      "total_tokens": 5548379,
       "estimated_cost_usd": 0,
-      "percent": 96.9
+      "percent": 97.5
     },
     {
       "model": "mimo-v2.5",
       "provider": "auto",
       "sessions": 1,
-      "calls": 30,
-      "input_tokens": 22327,
-      "output_tokens": 24297,
+      "calls": 48,
+      "input_tokens": 55865,
+      "output_tokens": 39426,
       "cache_read_tokens": 10304,
-      "reasoning_tokens": 24111,
-      "total_tokens": 81039,
+      "reasoning_tokens": 39132,
+      "total_tokens": 144727,
       "estimated_cost_usd": 0,
-      "percent": 3.1
+      "percent": 2.5
     }
   ],
-  "grand_total_tokens": 2645479,
+  "grand_total_tokens": 5693106,
   "grand_total_sessions": 1,
-  "grand_total_calls": 71,
+  "grand_total_calls": 113,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 2645479,
-    "projected_monthly_tokens": 476186220,
-    "projected_daily_tokens": 15872874,
+    "avg_daily_tokens_per_profile": 5693106,
+    "projected_monthly_tokens": 1024759080,
+    "projected_daily_tokens": 34158636,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 547614153
+    "with_margin_monthly": 1178472942
   },
   "alerts": [
-    {
-      "type": "multi_session_user",
-      "severity": "critical",
-      "profile": "2079556774",
-      "user_id": "2079556774",
-      "source": "telegram",
-      "message": "2079556774 tiene 3 sesiones activas simultáneas (umbral: 2)",
-      "details": {
-        "active_sessions": 3,
-        "threshold": 2,
-        "session_ids": [
-          "20260803_130710_4e090fc5",
-          "20260803_130710_4e090fc5",
-          "20260803_130710_4e090fc5"
-        ]
-      }
-    },
     {
       "type": "orphan_sessions",
       "severity": "info",
@@ -245,9 +228,9 @@
       }
     }
   ],
-  "alerts_count": 2,
+  "alerts_count": 1,
   "alerts_by_severity": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
     "info": 1
   }
