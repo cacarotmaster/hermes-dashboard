@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-08-03T06:00:05.447817+00:00",
-  "generated_at_unix": 1785736805.44785,
+  "generated_at": "2026-08-03T08:00:05.584182+00:00",
+  "generated_at_unix": 1785744005.5842223,
   "update_interval_minutes": 120,
   "since_date": "2026-08-03T05:00:00+00:00",
   "since_ts": 1785733200.0,
   "system": {
     "ram": {
       "total_gb": 8.1,
-      "used_gb": 3.5,
+      "used_gb": 3.4,
       "free_gb": 0.2,
       "available_gb": 4.7,
-      "percent": 42.5,
+      "percent": 42.0,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.0
     },
     "disk": {
       "total_gb": 76.9,
-      "used_gb": 30.9,
+      "used_gb": 31.0,
       "free_gb": 45.9,
       "percent": 41
     },
     "docker": {
       "qdrant": {
-        "cpu": "0.08%",
-        "mem": "32.36MiB / 7.57GiB",
+        "cpu": "0.07%",
+        "mem": "32.45MiB / 7.57GiB",
         "mem_percent": "0.42%"
       },
       "hermes": {
         "cpu": "1.59%",
-        "mem": "2.568GiB / 7.57GiB",
-        "mem_percent": "33.93%"
+        "mem": "2.569GiB / 7.57GiB",
+        "mem_percent": "33.94%"
       },
       "mcp-qdrant": {
-        "cpu": "0.24%",
+        "cpu": "0.21%",
         "mem": "234.7MiB / 7.57GiB",
         "mem_percent": "3.03%"
       }
     }
   },
   "system_health": {
-    "uptime": "2d 19h",
+    "uptime": "2d 21h",
     "load": {
-      "1m": 0.03,
-      "5m": 0.06,
-      "15m": 0.04
+      "1m": 0.35,
+      "5m": 0.09,
+      "15m": 0.02
     },
-    "processes": 194,
+    "processes": 193,
     "swap_percent": 0.0
   },
   "profiles": [
@@ -175,6 +175,16 @@
           {
             "user_id": "2079556774",
             "session_id": "20260802_055152_78216529",
+            "last_seen": "2026-08-02 07:49:46"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260802_055152_78216529",
+            "last_seen": "2026-08-02 07:49:16"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260802_055152_78216529",
             "last_seen": "2026-08-02 05:55:35"
           },
           {
@@ -186,16 +196,6 @@
             "user_id": "2079556774",
             "session_id": "20260801_174530_c16460f9",
             "last_seen": "2026-08-01 23:53:02"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260801_174530_c16460f9",
-            "last_seen": "2026-08-01 23:50:19"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260801_174530_c16460f9",
-            "last_seen": "2026-08-01 20:42:28"
           }
         ]
       }
