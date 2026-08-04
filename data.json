@@ -1,52 +1,57 @@
 {
-  "generated_at": "2026-08-04T04:00:05.402003+00:00",
-  "generated_at_unix": 1785816005.4020212,
+  "generated_at": "2026-08-04T06:00:05.713843+00:00",
+  "generated_at_unix": 1785823205.71386,
   "update_interval_minutes": 120,
-  "since_date": "2026-08-03T05:00:00+00:00",
-  "since_ts": 1785733200.0,
+  "since_date": "2026-08-04T05:00:00+00:00",
+  "since_ts": 1785819600.0,
   "system": {
     "ram": {
       "total_gb": 8.1,
       "used_gb": 3.8,
-      "free_gb": 0.3,
-      "available_gb": 4.3,
+      "free_gb": 0.2,
+      "available_gb": 4.4,
       "percent": 46.5,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.0
+      "swap_used_gb": 0.1
     },
     "disk": {
       "total_gb": 76.9,
-      "used_gb": 31.5,
-      "free_gb": 45.3,
-      "percent": 42
+      "used_gb": 32.3,
+      "free_gb": 44.5,
+      "percent": 43
     },
     "docker": {
+      "uptime-kuma": {
+        "cpu": "0.53%",
+        "mem": "111.8MiB / 7.57GiB",
+        "mem_percent": "1.44%"
+      },
       "qdrant": {
-        "cpu": "0.07%",
-        "mem": "32.7MiB / 7.57GiB",
+        "cpu": "0.15%",
+        "mem": "32.83MiB / 7.57GiB",
         "mem_percent": "0.42%"
       },
       "hermes": {
-        "cpu": "3.52%",
-        "mem": "2.911GiB / 7.57GiB",
-        "mem_percent": "38.46%"
+        "cpu": "1.34%",
+        "mem": "2.969GiB / 7.57GiB",
+        "mem_percent": "39.22%"
       },
       "mcp-qdrant": {
-        "cpu": "0.25%",
-        "mem": "233.8MiB / 7.57GiB",
-        "mem_percent": "3.02%"
+        "cpu": "0.21%",
+        "mem": "146.5MiB / 7.57GiB",
+        "mem_percent": "1.89%"
       }
     }
   },
   "system_health": {
-    "uptime": "3d 17h",
+    "uptime": "3d 19h",
     "load": {
-      "1m": 0.04,
-      "5m": 0.04,
-      "15m": 0.0
+      "1m": 0.38,
+      "5m": 0.08,
+      "15m": 0.02
     },
-    "processes": 199,
-    "swap_percent": 1.1
+    "processes": 202,
+    "swap_percent": 5.5
   },
   "profiles": [
     {
@@ -54,20 +59,20 @@
       "label": "Carlos",
       "bot": "default",
       "source": "telegram",
-      "sessions": 1,
-      "calls": 116,
-      "total_tokens": 6172256,
-      "avg_tokens_per_session": 2057418,
-      "tokens_per_day": 6172256,
-      "projected_monthly_tokens": 185167680,
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
       "estimated_cost_usd": 0,
-      "first_activity_iso": "2026-08-03T14:44:30.695248+00:00",
-      "last_activity_iso": "2026-08-03T17:58:29.950137+00:00",
-      "days_active": 0.6,
-      "favorite_model": "mimo-v2.5",
-      "favorite_provider": "xiaomi",
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
       "image_count": 0,
-      "active": true
+      "active": false
     },
     {
       "user_id": "8916742032",
@@ -150,45 +155,18 @@
       "active": false
     }
   ],
-  "models": [
-    {
-      "model": "mimo-v2.5",
-      "provider": "xiaomi",
-      "sessions": 1,
-      "calls": 68,
-      "input_tokens": 176496,
-      "output_tokens": 68436,
-      "cache_read_tokens": 5777408,
-      "reasoning_tokens": 5189,
-      "total_tokens": 6027529,
-      "estimated_cost_usd": 0,
-      "percent": 97.7
-    },
-    {
-      "model": "mimo-v2.5",
-      "provider": "auto",
-      "sessions": 1,
-      "calls": 48,
-      "input_tokens": 55865,
-      "output_tokens": 39426,
-      "cache_read_tokens": 10304,
-      "reasoning_tokens": 39132,
-      "total_tokens": 144727,
-      "estimated_cost_usd": 0,
-      "percent": 2.3
-    }
-  ],
-  "grand_total_tokens": 6172256,
-  "grand_total_sessions": 1,
-  "grand_total_calls": 116,
+  "models": [],
+  "grand_total_tokens": 0,
+  "grand_total_sessions": 0,
+  "grand_total_calls": 0,
   "projection": {
-    "current_profiles": 1,
+    "current_profiles": 0,
     "target_profiles": 6,
-    "avg_daily_tokens_per_profile": 6172256,
-    "projected_monthly_tokens": 1111006080,
-    "projected_daily_tokens": 37033536,
+    "avg_daily_tokens_per_profile": 0,
+    "projected_monthly_tokens": 0,
+    "projected_daily_tokens": 0,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 1277656992
+    "with_margin_monthly": 0
   },
   "alerts": [
     {
