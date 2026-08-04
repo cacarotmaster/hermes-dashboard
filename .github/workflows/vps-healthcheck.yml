@@ -1,0 +1,99 @@
+name: "VPS Health Check (Centinela)"
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Check VPS
+        id: check
+        run: |
+          set +e
+          RESULT=$(ssh -o StrictHostKeyChecking=accept-new \
+                       -o ConnectTimeout=15 \
+                       -o BatchMode=yes \
+                       ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            'docker ps --format "{{.Names}}:{{.Status}}" 2>/dev/null | \
+             grep -E "^(hermes|qdrant|mcp-qdrant|uptime-kuma):" | sort' 2>&1)
+          SSH_EXIT=$?
+
+          if [ $SSH_EXIT -ne 0 ]; then
+            echo "status=DOWN" >> $GITHUB_OUTPUT
+            echo "reason=SSH connection failed" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          CRITICAL="hermes qdrant mcp-qdrant uptime-kuma"
+          DOWN=""
+          for svc in $CRITICAL; do
+            if ! echo "$RESULT" | grep -q "^${svc}:Up"; then
+              DOWN="$DOWN $svc"
+            fi
+          done
+
+          if [ -n "$DOWN" ]; then
+            echo "status=DOWN" >> $GITHUB_OUTPUT
+            echo "reason=Containers down:$DOWN" >> $GITHUB_OUTPUT
+          else
+            echo "status=UP" >> $GITHUB_OUTPUT
+            echo "reason=All 4 critical containers running" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Load previous state
+        id: prev
+        uses: actions/cache@v4
+        with:
+          path: .vps-state
+          key: vps-health-state
+
+      - name: Alert on state change
+        env:
+          TG_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT_ID }}
+          STATUS: ${{ steps.check.outputs.status }}
+          REASON: ${{ steps.check.outputs.reason }}
+        run: |
+          PREV_STATUS="UP"
+          [ -f .vps-state/last_status ] && PREV_STATUS=$(cat .vps-state/last_status)
+          mkdir -p .vps-state
+          NOW=$(TZ='America/Bogota' date '+%Y-%m-%d %H:%M')
+
+          if [ "$STATUS" = "DOWN" ] && [ "$PREV_STATUS" != "DOWN" ]; then
+            MSG=$(printf "VPS CAIDO\nHora: %s COT\nMotivo: %s\nFuente: Centinela GitHub Actions" "$NOW" "$REASON")
+            curl -sf -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+              -d chat_id="${TG_CHAT}" -d text="$MSG"
+            echo "DOWN" > .vps-state/last_status
+            echo "Alerta DOWN enviada"
+
+          elif [ "$STATUS" = "UP" ] && [ "$PREV_STATUS" = "DOWN" ]; then
+            MSG=$(printf "VPS RESTAURADO\nHora: %s COT\nMotivo: %s\nFuente: Centinela GitHub Actions" "$NOW" "$REASON")
+            curl -sf -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+              -d chat_id="${TG_CHAT}" -d text="$MSG"
+            echo "UP" > .vps-state/last_status
+            echo "Alerta UP enviada"
+
+          elif [ "$STATUS" = "DOWN" ] && [ "$PREV_STATUS" = "DOWN" ]; then
+            echo "Still DOWN, sin alerta duplicada"
+
+          else
+            echo "UP" > .vps-state/last_status
+            echo "Still UP, sin cambios"
+          fi
+
+      - name: Save state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .vps-state
+          key: vps-health-state
