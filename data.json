@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T14:00:06.241021+00:00",
-  "generated_at_unix": 1785938406.2410293,
+  "generated_at": "2026-08-05T16:00:06.160562+00:00",
+  "generated_at_unix": 1785945606.1605754,
   "update_interval_minutes": 120,
   "since_date": "2026-08-05T05:00:00+00:00",
   "since_ts": 1785906000.0,
@@ -27,35 +27,35 @@
         "mem_percent": "47.61%"
       },
       "uptime-kuma": {
-        "cpu": "0.39%",
-        "mem": "106.6MiB / 7.57GiB",
-        "mem_percent": "1.38%"
+        "cpu": "0.68%",
+        "mem": "109.1MiB / 7.57GiB",
+        "mem_percent": "1.41%"
       },
       "qdrant": {
-        "cpu": "0.20%",
-        "mem": "11.44MiB / 7.57GiB",
+        "cpu": "0.05%",
+        "mem": "11.38MiB / 7.57GiB",
         "mem_percent": "0.15%"
       },
       "hermes": {
-        "cpu": "1.56%",
-        "mem": "2.638GiB / 7.57GiB",
-        "mem_percent": "34.85%"
+        "cpu": "1.82%",
+        "mem": "2.643GiB / 7.57GiB",
+        "mem_percent": "34.92%"
       },
       "mcp-qdrant": {
-        "cpu": "0.20%",
+        "cpu": "0.21%",
         "mem": "13.26MiB / 7.57GiB",
         "mem_percent": "0.17%"
       }
     }
   },
   "system_health": {
-    "uptime": "5d 3h",
+    "uptime": "5d 5h",
     "load": {
-      "1m": 0.0,
-      "5m": 0.02,
-      "15m": 0.01
+      "1m": 0.67,
+      "5m": 0.19,
+      "15m": 0.04
     },
-    "processes": 209,
+    "processes": 204,
     "swap_percent": 38.5
   },
   "profiles": [
@@ -65,15 +65,15 @@
       "bot": "default",
       "source": "telegram",
       "sessions": 1,
-      "calls": 33,
-      "total_tokens": 1699209,
-      "avg_tokens_per_session": 566403,
-      "tokens_per_day": 1699209,
-      "projected_monthly_tokens": 50976270,
+      "calls": 118,
+      "total_tokens": 9151408,
+      "avg_tokens_per_session": 3050469,
+      "tokens_per_day": 9151408,
+      "projected_monthly_tokens": 274542240,
       "estimated_cost_usd": 0,
       "first_activity_iso": "2026-08-05T12:52:53.327982+00:00",
-      "last_activity_iso": "2026-08-05T13:55:26.220541+00:00",
-      "days_active": 0.0,
+      "last_activity_iso": "2026-08-05T15:58:55.173418+00:00",
+      "days_active": 0.1,
       "favorite_model": "mimo-v2.5",
       "favorite_provider": "xiaomi",
       "image_count": 0,
@@ -205,59 +205,42 @@
       "model": "mimo-v2.5",
       "provider": "xiaomi",
       "sessions": 1,
-      "calls": 27,
-      "input_tokens": 239196,
-      "output_tokens": 12361,
-      "cache_read_tokens": 1428096,
-      "reasoning_tokens": 5968,
-      "total_tokens": 1685621,
+      "calls": 88,
+      "input_tokens": 538282,
+      "output_tokens": 41861,
+      "cache_read_tokens": 8479168,
+      "reasoning_tokens": 12181,
+      "total_tokens": 9071492,
       "estimated_cost_usd": 0,
-      "percent": 99.2
+      "percent": 99.1
     },
     {
       "model": "mimo-v2.5",
       "provider": "auto",
       "sessions": 1,
-      "calls": 6,
-      "input_tokens": 3245,
-      "output_tokens": 5193,
-      "cache_read_tokens": 0,
-      "reasoning_tokens": 5150,
-      "total_tokens": 13588,
+      "calls": 30,
+      "input_tokens": 11363,
+      "output_tokens": 25154,
+      "cache_read_tokens": 18432,
+      "reasoning_tokens": 24967,
+      "total_tokens": 79916,
       "estimated_cost_usd": 0,
-      "percent": 0.8
+      "percent": 0.9
     }
   ],
-  "grand_total_tokens": 1699209,
+  "grand_total_tokens": 9151408,
   "grand_total_sessions": 1,
-  "grand_total_calls": 33,
+  "grand_total_calls": 118,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 8,
-    "avg_daily_tokens_per_profile": 1699209,
-    "projected_monthly_tokens": 305857620,
-    "projected_daily_tokens": 10195254,
+    "avg_daily_tokens_per_profile": 9151408,
+    "projected_monthly_tokens": 1647253440,
+    "projected_daily_tokens": 54908448,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 351736263
+    "with_margin_monthly": 1894341455
   },
   "alerts": [
-    {
-      "type": "multi_session_user",
-      "severity": "critical",
-      "profile": "2079556774",
-      "user_id": "2079556774",
-      "source": "telegram",
-      "message": "2079556774 tiene 3 sesiones activas simultáneas (umbral: 2)",
-      "details": {
-        "active_sessions": 3,
-        "threshold": 2,
-        "session_ids": [
-          "20260805_125108_f922f2cf",
-          "20260805_125108_f922f2cf",
-          "20260805_125108_f922f2cf"
-        ]
-      }
-    },
     {
       "type": "orphan_sessions",
       "severity": "info",
@@ -295,9 +278,9 @@
       }
     }
   ],
-  "alerts_count": 2,
+  "alerts_count": 1,
   "alerts_by_severity": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
     "info": 1
   }
