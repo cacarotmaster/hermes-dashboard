@@ -209,6 +209,8 @@ def get_profile_metrics(conn):
         {"user_id": name_to_uid.get("Piedad", ""), "label": "Piedad", "bot": "piedad"},
         {"user_id": name_to_uid.get("Cielo", ""), "label": "Cielo", "bot": "cielo"},
         {"user_id": name_to_uid.get("Neffer", ""), "label": "Neffer", "bot": "neffer"},
+        {"user_id": name_to_uid.get("Angela", ""), "label": "Angela", "bot": "angela"},
+        {"user_id": name_to_uid.get("Leidy", ""), "label": "Leidy", "bot": "leidy"},
     ]
 
     # Solo perfiles Telegram
@@ -606,6 +608,16 @@ def git_push():
     if result.returncode != 0 and "nothing to commit" not in result.stdout + result.stderr:
         print(f"  ⚠️ Git commit: {result.stderr.strip()}")
 
+    # Pull rebase antes de push para evitar conflictos con remote
+    pull_r = subprocess.run(
+        ["git", "pull", "--rebase", "origin", "main"],
+        capture_output=True, text=True, cwd=REPO_DIR, timeout=30
+    )
+    if pull_r.returncode != 0:
+        print(f"  ⚠️ Git pull: {pull_r.stderr.strip()}")
+    else:
+        print("  📥 Pull rebase OK")
+
     subprocess.run(
         ["git", "push", "origin", "main"],
         check=True, timeout=30
@@ -642,7 +654,7 @@ def main():
     print("   🔍 Detectando anomalías...")
     alerts = detect_anomalies(conn, profiles)
 
-    # 7. Proyección a 6 perfiles (solo Telegram)
+    # 7. Proyección a 8 perfiles (solo Telegram)
     active_profiles = [p for p in profiles if p["tokens_per_day"] > 0]
     avg_daily_tokens = (
         sum(p["tokens_per_day"] for p in active_profiles) / len(active_profiles)
@@ -650,7 +662,7 @@ def main():
     )
     projection = {
         "current_profiles": len(active_profiles),
-        "target_profiles": 6,
+        "target_profiles": 8,
         "avg_daily_tokens_per_profile": int(avg_daily_tokens),
         "projected_monthly_tokens": int(avg_daily_tokens * 30 * 6),
         "projected_daily_tokens": int(avg_daily_tokens * 6),
