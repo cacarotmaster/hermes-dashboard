@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T02:00:05.723604+00:00",
-  "generated_at_unix": 1785895205.7236226,
+  "generated_at": "2026-08-05T02:36:09.361200+00:00",
+  "generated_at_unix": 1785897369.3612177,
   "update_interval_minutes": 120,
   "since_date": "2026-08-04T05:00:00+00:00",
   "since_ts": 1785819600.0,
@@ -10,7 +10,7 @@
       "used_gb": 3.8,
       "free_gb": 0.1,
       "available_gb": 4.4,
-      "percent": 46.3,
+      "percent": 46.4,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.3
     },
@@ -22,36 +22,36 @@
     },
     "docker": {
       "uptime-kuma": {
-        "cpu": "0.57%",
-        "mem": "109.4MiB / 7.57GiB",
-        "mem_percent": "1.41%"
+        "cpu": "0.75%",
+        "mem": "109.7MiB / 7.57GiB",
+        "mem_percent": "1.42%"
       },
       "qdrant": {
-        "cpu": "0.17%",
-        "mem": "14.03MiB / 7.57GiB",
-        "mem_percent": "0.18%"
+        "cpu": "0.08%",
+        "mem": "13.54MiB / 7.57GiB",
+        "mem_percent": "0.17%"
       },
       "hermes": {
-        "cpu": "1.74%",
-        "mem": "3.044GiB / 7.57GiB",
-        "mem_percent": "40.22%"
+        "cpu": "7.44%",
+        "mem": "3.028GiB / 7.57GiB",
+        "mem_percent": "40.00%"
       },
       "mcp-qdrant": {
-        "cpu": "0.32%",
-        "mem": "28.57MiB / 7.57GiB",
-        "mem_percent": "0.37%"
+        "cpu": "0.23%",
+        "mem": "27.87MiB / 7.57GiB",
+        "mem_percent": "0.36%"
       }
     }
   },
   "system_health": {
-    "uptime": "4d 15h",
+    "uptime": "4d 16h",
     "load": {
-      "1m": 0.39,
-      "5m": 0.12,
-      "15m": 0.03
+      "1m": 0.0,
+      "5m": 0.02,
+      "15m": 0.0
     },
-    "processes": 200,
-    "swap_percent": 12.7
+    "processes": 214,
+    "swap_percent": 13.6
   },
   "profiles": [
     {
@@ -153,6 +153,46 @@
       "favorite_provider": "—",
       "image_count": 0,
       "active": false
+    },
+    {
+      "user_id": "pending_angela",
+      "label": "Angela",
+      "bot": "angela",
+      "source": "telegram",
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
+      "estimated_cost_usd": 0,
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
+      "image_count": 0,
+      "active": false
+    },
+    {
+      "user_id": "pending_leidy",
+      "label": "Leidy",
+      "bot": "leidy",
+      "source": "telegram",
+      "sessions": 0,
+      "calls": 0,
+      "total_tokens": 0,
+      "avg_tokens_per_session": 0,
+      "tokens_per_day": 0,
+      "projected_monthly_tokens": 0,
+      "estimated_cost_usd": 0,
+      "first_activity_iso": null,
+      "last_activity_iso": null,
+      "days_active": 0,
+      "favorite_model": "—",
+      "favorite_provider": "—",
+      "image_count": 0,
+      "active": false
     }
   ],
   "models": [
@@ -214,7 +254,7 @@
   "grand_total_calls": 114,
   "projection": {
     "current_profiles": 1,
-    "target_profiles": 6,
+    "target_profiles": 8,
     "avg_daily_tokens_per_profile": 11617713,
     "projected_monthly_tokens": 2091188340,
     "projected_daily_tokens": 69706278,
