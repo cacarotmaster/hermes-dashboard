@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-04T22:00:05.821851+00:00",
-  "generated_at_unix": 1785880805.821866,
+  "generated_at": "2026-08-05T00:00:05.689093+00:00",
+  "generated_at_unix": 1785888005.6891055,
   "update_interval_minutes": 120,
   "since_date": "2026-08-04T05:00:00+00:00",
   "since_ts": 1785819600.0,
@@ -9,8 +9,8 @@
       "total_gb": 8.1,
       "used_gb": 3.9,
       "free_gb": 0.2,
-      "available_gb": 4.3,
-      "percent": 47.4,
+      "available_gb": 4.2,
+      "percent": 47.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.1
     },
@@ -22,36 +22,36 @@
     },
     "docker": {
       "uptime-kuma": {
-        "cpu": "0.83%",
-        "mem": "109.8MiB / 7.57GiB",
-        "mem_percent": "1.42%"
+        "cpu": "0.98%",
+        "mem": "109.5MiB / 7.57GiB",
+        "mem_percent": "1.41%"
       },
       "qdrant": {
-        "cpu": "0.19%",
-        "mem": "29.55MiB / 7.57GiB",
+        "cpu": "0.07%",
+        "mem": "29.1MiB / 7.57GiB",
         "mem_percent": "0.38%"
       },
       "hermes": {
-        "cpu": "1.71%",
-        "mem": "2.999GiB / 7.57GiB",
-        "mem_percent": "39.62%"
+        "cpu": "1.39%",
+        "mem": "3.014GiB / 7.57GiB",
+        "mem_percent": "39.81%"
       },
       "mcp-qdrant": {
-        "cpu": "0.24%",
-        "mem": "126.3MiB / 7.57GiB",
-        "mem_percent": "1.63%"
+        "cpu": "0.23%",
+        "mem": "124.3MiB / 7.57GiB",
+        "mem_percent": "1.60%"
       }
     }
   },
   "system_health": {
-    "uptime": "4d 11h",
+    "uptime": "4d 13h",
     "load": {
-      "1m": 0.0,
-      "5m": 0.01,
+      "1m": 0.03,
+      "5m": 0.04,
       "15m": 0.0
     },
-    "processes": 204,
-    "swap_percent": 6.7
+    "processes": 199,
+    "swap_percent": 6.9
   },
   "profiles": [
     {
@@ -68,7 +68,7 @@
       "estimated_cost_usd": 0.0873,
       "first_activity_iso": "2026-08-04T18:39:24.905790+00:00",
       "last_activity_iso": "2026-08-04T20:02:32.692802+00:00",
-      "days_active": 0.1,
+      "days_active": 0.2,
       "favorite_model": "mimo-v2.5",
       "favorite_provider": "xiaomi",
       "image_count": 0,
