@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T12:00:05.335533+00:00",
-  "generated_at_unix": 1785931205.335558,
+  "generated_at": "2026-08-05T14:00:06.241021+00:00",
+  "generated_at_unix": 1785938406.2410293,
   "update_interval_minutes": 120,
   "since_date": "2026-08-05T05:00:00+00:00",
   "since_ts": 1785906000.0,
@@ -8,54 +8,54 @@
     "ram": {
       "total_gb": 8.1,
       "used_gb": 3.6,
-      "free_gb": 0.2,
-      "available_gb": 4.5,
-      "percent": 44.4,
+      "free_gb": 0.1,
+      "available_gb": 4.6,
+      "percent": 43.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.8
     },
     "disk": {
       "total_gb": 76.9,
-      "used_gb": 35.4,
-      "free_gb": 41.5,
-      "percent": 46
+      "used_gb": 35.5,
+      "free_gb": 41.4,
+      "percent": 47
     },
     "docker": {
       "streamlit-dashboard": {
-        "cpu": "9.65%",
-        "mem": "132.2MiB / 256MiB",
-        "mem_percent": "51.66%"
+        "cpu": "0.00%",
+        "mem": "121.9MiB / 256MiB",
+        "mem_percent": "47.61%"
       },
       "uptime-kuma": {
-        "cpu": "0.40%",
-        "mem": "112.6MiB / 7.57GiB",
-        "mem_percent": "1.45%"
+        "cpu": "0.39%",
+        "mem": "106.6MiB / 7.57GiB",
+        "mem_percent": "1.38%"
       },
       "qdrant": {
-        "cpu": "0.06%",
-        "mem": "11.45MiB / 7.57GiB",
+        "cpu": "0.20%",
+        "mem": "11.44MiB / 7.57GiB",
         "mem_percent": "0.15%"
       },
       "hermes": {
-        "cpu": "1.92%",
-        "mem": "2.606GiB / 7.57GiB",
-        "mem_percent": "34.43%"
+        "cpu": "1.56%",
+        "mem": "2.638GiB / 7.57GiB",
+        "mem_percent": "34.85%"
       },
       "mcp-qdrant": {
-        "cpu": "0.21%",
+        "cpu": "0.20%",
         "mem": "13.26MiB / 7.57GiB",
         "mem_percent": "0.17%"
       }
     }
   },
   "system_health": {
-    "uptime": "5d 1h",
+    "uptime": "5d 3h",
     "load": {
-      "1m": 0.08,
-      "5m": 0.06,
-      "15m": 0.02
+      "1m": 0.0,
+      "5m": 0.02,
+      "15m": 0.01
     },
-    "processes": 207,
+    "processes": 209,
     "swap_percent": 38.5
   },
   "profiles": [
@@ -64,20 +64,20 @@
       "label": "Carlos",
       "bot": "default",
       "source": "telegram",
-      "sessions": 0,
-      "calls": 0,
-      "total_tokens": 0,
-      "avg_tokens_per_session": 0,
-      "tokens_per_day": 0,
-      "projected_monthly_tokens": 0,
+      "sessions": 1,
+      "calls": 33,
+      "total_tokens": 1699209,
+      "avg_tokens_per_session": 566403,
+      "tokens_per_day": 1699209,
+      "projected_monthly_tokens": 50976270,
       "estimated_cost_usd": 0,
-      "first_activity_iso": null,
-      "last_activity_iso": null,
-      "days_active": 0,
-      "favorite_model": "—",
-      "favorite_provider": "—",
+      "first_activity_iso": "2026-08-05T12:52:53.327982+00:00",
+      "last_activity_iso": "2026-08-05T13:55:26.220541+00:00",
+      "days_active": 0.0,
+      "favorite_model": "mimo-v2.5",
+      "favorite_provider": "xiaomi",
       "image_count": 0,
-      "active": false
+      "active": true
     },
     {
       "user_id": "8916742032",
@@ -200,20 +200,64 @@
       "active": false
     }
   ],
-  "models": [],
-  "grand_total_tokens": 0,
-  "grand_total_sessions": 0,
-  "grand_total_calls": 0,
+  "models": [
+    {
+      "model": "mimo-v2.5",
+      "provider": "xiaomi",
+      "sessions": 1,
+      "calls": 27,
+      "input_tokens": 239196,
+      "output_tokens": 12361,
+      "cache_read_tokens": 1428096,
+      "reasoning_tokens": 5968,
+      "total_tokens": 1685621,
+      "estimated_cost_usd": 0,
+      "percent": 99.2
+    },
+    {
+      "model": "mimo-v2.5",
+      "provider": "auto",
+      "sessions": 1,
+      "calls": 6,
+      "input_tokens": 3245,
+      "output_tokens": 5193,
+      "cache_read_tokens": 0,
+      "reasoning_tokens": 5150,
+      "total_tokens": 13588,
+      "estimated_cost_usd": 0,
+      "percent": 0.8
+    }
+  ],
+  "grand_total_tokens": 1699209,
+  "grand_total_sessions": 1,
+  "grand_total_calls": 33,
   "projection": {
-    "current_profiles": 0,
+    "current_profiles": 1,
     "target_profiles": 8,
-    "avg_daily_tokens_per_profile": 0,
-    "projected_monthly_tokens": 0,
-    "projected_daily_tokens": 0,
+    "avg_daily_tokens_per_profile": 1699209,
+    "projected_monthly_tokens": 305857620,
+    "projected_daily_tokens": 10195254,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 0
+    "with_margin_monthly": 351736263
   },
   "alerts": [
+    {
+      "type": "multi_session_user",
+      "severity": "critical",
+      "profile": "2079556774",
+      "user_id": "2079556774",
+      "source": "telegram",
+      "message": "2079556774 tiene 3 sesiones activas simultáneas (umbral: 2)",
+      "details": {
+        "active_sessions": 3,
+        "threshold": 2,
+        "session_ids": [
+          "20260805_125108_f922f2cf",
+          "20260805_125108_f922f2cf",
+          "20260805_125108_f922f2cf"
+        ]
+      }
+    },
     {
       "type": "orphan_sessions",
       "severity": "info",
@@ -251,9 +295,9 @@
       }
     }
   ],
-  "alerts_count": 1,
+  "alerts_count": 2,
   "alerts_by_severity": {
-    "critical": 0,
+    "critical": 1,
     "warning": 0,
     "info": 1
   }
