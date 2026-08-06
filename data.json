@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T06:00:06.129993+00:00",
-  "generated_at_unix": 1785996006.130004,
+  "generated_at": "2026-08-06T08:00:06.009874+00:00",
+  "generated_at_unix": 1786003206.0098848,
   "update_interval_minutes": 120,
   "since_date": "2026-08-06T05:00:00+00:00",
   "since_ts": 1785992400.0,
@@ -8,9 +8,9 @@
     "ram": {
       "total_gb": 8.1,
       "used_gb": 2.1,
-      "free_gb": 4.0,
+      "free_gb": 3.9,
       "available_gb": 6.0,
-      "percent": 26.0,
+      "percent": 26.1,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.5
     },
@@ -22,41 +22,41 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "0.71%",
-        "mem": "1.122GiB / 7.57GiB",
-        "mem_percent": "14.82%"
+        "cpu": "1.34%",
+        "mem": "1.133GiB / 7.57GiB",
+        "mem_percent": "14.97%"
       },
       "streamlit-dashboard": {
         "cpu": "0.00%",
-        "mem": "26.78MiB / 256MiB",
-        "mem_percent": "10.46%"
+        "mem": "26.93MiB / 256MiB",
+        "mem_percent": "10.52%"
       },
       "uptime-kuma": {
-        "cpu": "0.59%",
-        "mem": "118.8MiB / 7.57GiB",
-        "mem_percent": "1.53%"
+        "cpu": "0.58%",
+        "mem": "119.4MiB / 7.57GiB",
+        "mem_percent": "1.54%"
       },
       "qdrant": {
-        "cpu": "0.06%",
-        "mem": "35.06MiB / 7.57GiB",
+        "cpu": "0.05%",
+        "mem": "35.18MiB / 7.57GiB",
         "mem_percent": "0.45%"
       },
       "mcp-qdrant": {
-        "cpu": "0.25%",
+        "cpu": "0.22%",
         "mem": "110.2MiB / 7.57GiB",
         "mem_percent": "1.42%"
       }
     }
   },
   "system_health": {
-    "uptime": "5d 19h",
+    "uptime": "5d 21h",
     "load": {
-      "1m": 0.25,
-      "5m": 0.12,
-      "15m": 0.08
+      "1m": 0.12,
+      "5m": 0.04,
+      "15m": 0.01
     },
-    "processes": 201,
-    "swap_percent": 22.8
+    "processes": 202,
+    "swap_percent": 22.7
   },
   "profiles": [
     {
@@ -73,7 +73,7 @@
       "estimated_cost_usd": 0,
       "first_activity_iso": "2026-08-06T05:00:12.194967+00:00",
       "last_activity_iso": "2026-08-06T05:21:23.276791+00:00",
-      "days_active": 0.0,
+      "days_active": 0.1,
       "favorite_model": "z-ai/glm-5.2",
       "favorite_provider": "nvidia-nim",
       "image_count": 0,
@@ -268,25 +268,6 @@
   },
   "alerts": [
     {
-      "type": "multi_session_user",
-      "severity": "critical",
-      "profile": "2079556774",
-      "user_id": "2079556774",
-      "source": "telegram",
-      "message": "2079556774 tiene 5 sesiones activas simultáneas (umbral: 2)",
-      "details": {
-        "active_sessions": 5,
-        "threshold": 2,
-        "session_ids": [
-          "20260806_050915_35185c21",
-          "20260806_050915_35185c21",
-          "20260806_045708_3bdc013e",
-          "20260806_045708_3bdc013e",
-          "20260806_045708_3bdc013e"
-        ]
-      }
-    },
-    {
       "type": "orphan_sessions",
       "severity": "info",
       "profile": "all",
@@ -323,9 +304,9 @@
       }
     }
   ],
-  "alerts_count": 2,
+  "alerts_count": 1,
   "alerts_by_severity": {
-    "critical": 1,
+    "critical": 0,
     "warning": 0,
     "info": 1
   }
