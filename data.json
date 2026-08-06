@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-08-05T22:00:06.269499+00:00",
-  "generated_at_unix": 1785967206.2695236,
+  "generated_at": "2026-08-06T00:00:06.128704+00:00",
+  "generated_at_unix": 1785974406.128726,
   "update_interval_minutes": 120,
   "since_date": "2026-08-05T05:00:00+00:00",
   "since_ts": 1785906000.0,
   "system": {
     "ram": {
       "total_gb": 8.1,
-      "used_gb": 3.8,
+      "used_gb": 2.0,
       "free_gb": 0.2,
-      "available_gb": 4.4,
-      "percent": 46.4,
+      "available_gb": 6.1,
+      "percent": 24.9,
       "swap_total_gb": 2.1,
-      "swap_used_gb": 0.8
+      "swap_used_gb": 0.3
     },
     "disk": {
       "total_gb": 76.9,
-      "used_gb": 35.9,
-      "free_gb": 41.0,
-      "percent": 47
+      "used_gb": 37.3,
+      "free_gb": 39.6,
+      "percent": 49
     },
     "docker": {
+      "hermes": {
+        "cpu": "2.19%",
+        "mem": "991.7MiB / 7.57GiB",
+        "mem_percent": "12.79%"
+      },
       "streamlit-dashboard": {
         "cpu": "0.00%",
         "mem": "122.7MiB / 256MiB",
         "mem_percent": "47.94%"
       },
       "uptime-kuma": {
-        "cpu": "0.80%",
-        "mem": "102MiB / 7.57GiB",
-        "mem_percent": "1.32%"
+        "cpu": "0.91%",
+        "mem": "99.51MiB / 7.57GiB",
+        "mem_percent": "1.28%"
       },
       "qdrant": {
-        "cpu": "0.21%",
-        "mem": "9.98MiB / 7.57GiB",
-        "mem_percent": "0.13%"
-      },
-      "hermes": {
-        "cpu": "1.80%",
-        "mem": "3.062GiB / 7.57GiB",
-        "mem_percent": "40.45%"
+        "cpu": "0.08%",
+        "mem": "9.68MiB / 7.57GiB",
+        "mem_percent": "0.12%"
       },
       "mcp-qdrant": {
-        "cpu": "0.25%",
-        "mem": "12.18MiB / 7.57GiB",
+        "cpu": "0.27%",
+        "mem": "12.36MiB / 7.57GiB",
         "mem_percent": "0.16%"
       }
     }
   },
   "system_health": {
-    "uptime": "5d 11h",
+    "uptime": "5d 13h",
     "load": {
-      "1m": 0.03,
-      "5m": 0.05,
-      "15m": 0.01
+      "1m": 0.55,
+      "5m": 0.51,
+      "15m": 0.32
     },
-    "processes": 203,
-    "swap_percent": 38.4
+    "processes": 209,
+    "swap_percent": 14.5
   },
   "profiles": [
     {
@@ -64,16 +64,16 @@
       "label": "Carlos",
       "bot": "default",
       "source": "telegram",
-      "sessions": 3,
-      "calls": 306,
-      "total_tokens": 36817185,
-      "avg_tokens_per_session": 3681718,
-      "tokens_per_day": 36817185,
-      "projected_monthly_tokens": 1104515550,
+      "sessions": 4,
+      "calls": 308,
+      "total_tokens": 36849637,
+      "avg_tokens_per_session": 3070803,
+      "tokens_per_day": 36849637,
+      "projected_monthly_tokens": 1105489110,
       "estimated_cost_usd": 0.2854,
       "first_activity_iso": "2026-08-05T12:52:53.327982+00:00",
-      "last_activity_iso": "2026-08-05T20:25:51.253987+00:00",
-      "days_active": 0.4,
+      "last_activity_iso": "2026-08-05T23:30:11.862679+00:00",
+      "days_active": 0.5,
       "favorite_model": "deepseek-v4-flash",
       "favorite_provider": "deepseek",
       "image_count": 0,
@@ -212,20 +212,20 @@
       "reasoning_tokens": 99204,
       "total_tokens": 25183344,
       "estimated_cost_usd": 0.1355,
-      "percent": 68.3
+      "percent": 68.2
     },
     {
       "model": "mimo-v2.5",
       "provider": "xiaomi",
-      "sessions": 1,
-      "calls": 97,
-      "input_tokens": 544771,
-      "output_tokens": 45976,
+      "sessions": 2,
+      "calls": 98,
+      "input_tokens": 576823,
+      "output_tokens": 46011,
       "cache_read_tokens": 9937856,
-      "reasoning_tokens": 12990,
-      "total_tokens": 10541593,
+      "reasoning_tokens": 13009,
+      "total_tokens": 10573699,
       "estimated_cost_usd": 0,
-      "percent": 28.6
+      "percent": 28.7
     },
     {
       "model": "openai/gpt-5.6-luna",
@@ -256,13 +256,13 @@
     {
       "model": "mimo-v2.5",
       "provider": "auto",
-      "sessions": 1,
-      "calls": 34,
-      "input_tokens": 12015,
-      "output_tokens": 28578,
+      "sessions": 2,
+      "calls": 35,
+      "input_tokens": 12143,
+      "output_tokens": 28693,
       "cache_read_tokens": 19968,
-      "reasoning_tokens": 28367,
-      "total_tokens": 88928,
+      "reasoning_tokens": 28470,
+      "total_tokens": 89274,
       "estimated_cost_usd": 0,
       "percent": 0.2
     },
@@ -293,17 +293,17 @@
       "percent": 0.0
     }
   ],
-  "grand_total_tokens": 36871572,
-  "grand_total_sessions": 3,
-  "grand_total_calls": 306,
+  "grand_total_tokens": 36904024,
+  "grand_total_sessions": 4,
+  "grand_total_calls": 308,
   "projection": {
     "current_profiles": 1,
     "target_profiles": 8,
-    "avg_daily_tokens_per_profile": 36817185,
-    "projected_monthly_tokens": 6627093300,
-    "projected_daily_tokens": 220903110,
+    "avg_daily_tokens_per_profile": 36849637,
+    "projected_monthly_tokens": 6632934660,
+    "projected_daily_tokens": 221097822,
     "growth_margin_percent": 15,
-    "with_margin_monthly": 7621157294
+    "with_margin_monthly": 7627874858
   },
   "alerts": [
     {
