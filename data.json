@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-07T12:00:05.996653+00:00",
-  "generated_at_unix": 1786104005.9966848,
+  "generated_at": "2026-08-07T14:00:05.902027+00:00",
+  "generated_at_unix": 1786111205.9020424,
   "update_interval_minutes": 120,
   "since_date": "2026-08-07T05:00:00+00:00",
   "since_ts": 1786078800.0,
   "system": {
     "ram": {
       "total_gb": 8.1,
-      "used_gb": 2.7,
-      "free_gb": 1.2,
-      "available_gb": 5.4,
-      "percent": 33.0,
+      "used_gb": 2.8,
+      "free_gb": 1.0,
+      "available_gb": 5.3,
+      "percent": 34.8,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.5
     },
@@ -22,40 +22,40 @@
     },
     "docker": {
       "hermes": {
-        "cpu": "1.17%",
-        "mem": "1.819GiB / 7.57GiB",
-        "mem_percent": "24.03%"
+        "cpu": "1.44%",
+        "mem": "1.987GiB / 7.57GiB",
+        "mem_percent": "26.26%"
       },
       "streamlit-dashboard": {
         "cpu": "0.00%",
-        "mem": "29.61MiB / 256MiB",
-        "mem_percent": "11.57%"
+        "mem": "29.64MiB / 256MiB",
+        "mem_percent": "11.58%"
       },
       "uptime-kuma": {
-        "cpu": "0.65%",
-        "mem": "123.8MiB / 7.57GiB",
-        "mem_percent": "1.60%"
+        "cpu": "0.56%",
+        "mem": "123.5MiB / 7.57GiB",
+        "mem_percent": "1.59%"
       },
       "qdrant": {
-        "cpu": "0.08%",
-        "mem": "36.35MiB / 7.57GiB",
+        "cpu": "0.06%",
+        "mem": "36.39MiB / 7.57GiB",
         "mem_percent": "0.47%"
       },
       "mcp-qdrant": {
-        "cpu": "0.24%",
-        "mem": "111.1MiB / 7.57GiB",
-        "mem_percent": "1.43%"
+        "cpu": "0.28%",
+        "mem": "111.3MiB / 7.57GiB",
+        "mem_percent": "1.44%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 1h",
+    "uptime": "7d 3h",
     "load": {
-      "1m": 0.1,
-      "5m": 0.05,
-      "15m": 0.01
+      "1m": 0.0,
+      "5m": 0.02,
+      "15m": 0.0
     },
-    "processes": 201,
+    "processes": 202,
     "swap_percent": 22.4
   },
   "profiles": [
@@ -224,28 +224,28 @@
         "sessions": [
           {
             "user_id": "2079556774",
+            "session_id": "20260806_132438_c274c31f",
+            "last_seen": "2026-08-06 13:25:39"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260806_124621_2de080e6",
+            "last_seen": "2026-08-06 13:02:18"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260806_124621_2de080e6",
+            "last_seen": "2026-08-06 12:51:58"
+          },
+          {
+            "user_id": "2079556774",
+            "session_id": "20260806_124621_2de080e6",
+            "last_seen": "2026-08-06 12:50:17"
+          },
+          {
+            "user_id": "2079556774",
             "session_id": "20260806_111245_fbf9af8b",
-            "last_seen": "2026-08-06 11:14:10"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260806_050915_35185c21",
-            "last_seen": "2026-08-06 05:21:23"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260806_050915_35185c21",
-            "last_seen": "2026-08-06 05:20:43"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260806_045708_3bdc013e",
-            "last_seen": "2026-08-06 05:06:36"
-          },
-          {
-            "user_id": "2079556774",
-            "session_id": "20260806_045708_3bdc013e",
-            "last_seen": "2026-08-06 05:06:07"
+            "last_seen": "2026-08-06 12:43:18"
           }
         ]
       }
