@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T16:00:06.085661+00:00",
-  "generated_at_unix": 1786118406.085681,
+  "generated_at": "2026-08-07T18:00:04.270967+00:00",
+  "generated_at_unix": 1786125604.270994,
   "update_interval_minutes": 120,
   "since_date": "2026-08-07T05:00:00+00:00",
   "since_ts": 1786078800.0,
@@ -8,54 +8,54 @@
     "ram": {
       "total_gb": 8.1,
       "used_gb": 2.8,
-      "free_gb": 1.0,
+      "free_gb": 0.3,
       "available_gb": 5.3,
-      "percent": 34.8,
+      "percent": 34.9,
       "swap_total_gb": 2.1,
       "swap_used_gb": 0.5
     },
     "disk": {
       "total_gb": 76.9,
-      "used_gb": 41.2,
-      "free_gb": 35.7,
-      "percent": 54
+      "used_gb": 41.8,
+      "free_gb": 35.0,
+      "percent": 55
     },
     "docker": {
       "hermes": {
-        "cpu": "1.17%",
-        "mem": "1.995GiB / 7.57GiB",
-        "mem_percent": "26.36%"
+        "cpu": "2.30%",
+        "mem": "1.993GiB / 7.57GiB",
+        "mem_percent": "26.33%"
       },
       "streamlit-dashboard": {
         "cpu": "0.00%",
-        "mem": "29.67MiB / 256MiB",
-        "mem_percent": "11.59%"
+        "mem": "30.65MiB / 256MiB",
+        "mem_percent": "11.97%"
       },
       "uptime-kuma": {
-        "cpu": "0.68%",
-        "mem": "123.5MiB / 7.57GiB",
+        "cpu": "0.70%",
+        "mem": "123.2MiB / 7.57GiB",
         "mem_percent": "1.59%"
       },
       "qdrant": {
-        "cpu": "0.08%",
-        "mem": "36.42MiB / 7.57GiB",
+        "cpu": "0.18%",
+        "mem": "36.43MiB / 7.57GiB",
         "mem_percent": "0.47%"
       },
       "mcp-qdrant": {
-        "cpu": "0.31%",
-        "mem": "111.3MiB / 7.57GiB",
+        "cpu": "0.30%",
+        "mem": "111.4MiB / 7.57GiB",
         "mem_percent": "1.44%"
       }
     }
   },
   "system_health": {
-    "uptime": "7d 5h",
+    "uptime": "7d 7h",
     "load": {
-      "1m": 0.32,
-      "5m": 0.11,
-      "15m": 0.03
+      "1m": 0.09,
+      "5m": 0.06,
+      "15m": 0.0
     },
-    "processes": 202,
+    "processes": 211,
     "swap_percent": 22.4
   },
   "profiles": [
