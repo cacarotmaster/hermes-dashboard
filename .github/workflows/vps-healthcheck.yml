@@ -25,7 +25,7 @@ jobs:
                        -o BatchMode=yes \
                        ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
             'docker ps --format "{{.Names}}:{{.Status}}" 2>/dev/null | \
-             grep -E "^(hermes|qdrant|mcp-qdrant|uptime-kuma):" | sort' 2>&1)
+             grep -E "^(hermes|qdrant|mcp-qdrant):" | sort' 2>&1)
           SSH_EXIT=$?
 
           if [ $SSH_EXIT -ne 0 ]; then
@@ -34,7 +34,7 @@ jobs:
             exit 0
           fi
 
-          CRITICAL="hermes qdrant mcp-qdrant uptime-kuma"
+          CRITICAL="hermes qdrant mcp-qdrant"
           DOWN=""
           for svc in $CRITICAL; do
             if ! echo "$RESULT" | grep -q "^${svc}:Up"; then
@@ -47,7 +47,7 @@ jobs:
             echo "reason=Containers down:$DOWN" >> $GITHUB_OUTPUT
           else
             echo "status=UP" >> $GITHUB_OUTPUT
-            echo "reason=All 4 critical containers running" >> $GITHUB_OUTPUT
+            echo "reason=All 3 critical containers running" >> $GITHUB_OUTPUT
           fi
 
       - name: Load previous state
